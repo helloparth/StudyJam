@@ -1,0 +1,475 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		97646E2318B35C4400A8DCC4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97646E2218B35C4400A8DCC4 /* Foundation.framework */; };
+		97646E2518B35C4400A8DCC4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97646E2418B35C4400A8DCC4 /* CoreGraphics.framework */; };
+		97646E2718B35C4400A8DCC4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97646E2618B35C4400A8DCC4 /* UIKit.framework */; };
+		97646E2D18B35C4400A8DCC4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 97646E2B18B35C4400A8DCC4 /* InfoPlist.strings */; };
+		97646E2F18B35C4400A8DCC4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 97646E2E18B35C4400A8DCC4 /* main.m */; };
+		97646E3318B35C4400A8DCC4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 97646E3218B35C4400A8DCC4 /* AppDelegate.m */; };
+		97646E3618B35C4400A8DCC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97646E3418B35C4400A8DCC4 /* Main.storyboard */; };
+		97646E3918B35C4400A8DCC4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97646E3818B35C4400A8DCC4 /* ViewController.m */; };
+		97646E3B18B35C4400A8DCC4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97646E3A18B35C4400A8DCC4 /* Images.xcassets */; };
+		97646E4218B35C4400A8DCC4 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97646E4118B35C4400A8DCC4 /* XCTest.framework */; };
+		97646E4318B35C4400A8DCC4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97646E2218B35C4400A8DCC4 /* Foundation.framework */; };
+		97646E4418B35C4400A8DCC4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97646E2618B35C4400A8DCC4 /* UIKit.framework */; };
+		97646E4C18B35C4400A8DCC4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 97646E4A18B35C4400A8DCC4 /* InfoPlist.strings */; };
+		97646E4E18B35C4400A8DCC4 /* StudyJamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 97646E4D18B35C4400A8DCC4 /* StudyJamTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		97646E4518B35C4400A8DCC4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 97646E1718B35C4400A8DCC4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 97646E1E18B35C4400A8DCC4;
+			remoteInfo = StudyJam;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		97646E1F18B35C4400A8DCC4 /* StudyJam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyJam.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		97646E2218B35C4400A8DCC4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		97646E2418B35C4400A8DCC4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		97646E2618B35C4400A8DCC4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		97646E2A18B35C4400A8DCC4 /* StudyJam-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StudyJam-Info.plist"; sourceTree = "<group>"; };
+		97646E2C18B35C4400A8DCC4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		97646E2E18B35C4400A8DCC4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		97646E3018B35C4400A8DCC4 /* StudyJam-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StudyJam-Prefix.pch"; sourceTree = "<group>"; };
+		97646E3118B35C4400A8DCC4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		97646E3218B35C4400A8DCC4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		97646E3518B35C4400A8DCC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		97646E3718B35C4400A8DCC4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		97646E3818B35C4400A8DCC4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		97646E3A18B35C4400A8DCC4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		97646E4018B35C4400A8DCC4 /* StudyJamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudyJamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		97646E4118B35C4400A8DCC4 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		97646E4918B35C4400A8DCC4 /* StudyJamTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StudyJamTests-Info.plist"; sourceTree = "<group>"; };
+		97646E4B18B35C4400A8DCC4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		97646E4D18B35C4400A8DCC4 /* StudyJamTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudyJamTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		97646E1C18B35C4400A8DCC4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97646E2518B35C4400A8DCC4 /* CoreGraphics.framework in Frameworks */,
+				97646E2718B35C4400A8DCC4 /* UIKit.framework in Frameworks */,
+				97646E2318B35C4400A8DCC4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97646E3D18B35C4400A8DCC4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97646E4218B35C4400A8DCC4 /* XCTest.framework in Frameworks */,
+				97646E4418B35C4400A8DCC4 /* UIKit.framework in Frameworks */,
+				97646E4318B35C4400A8DCC4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		97646E1618B35C4400A8DCC4 = {
+			isa = PBXGroup;
+			children = (
+				97646E2818B35C4400A8DCC4 /* StudyJam */,
+				97646E4718B35C4400A8DCC4 /* StudyJamTests */,
+				97646E2118B35C4400A8DCC4 /* Frameworks */,
+				97646E2018B35C4400A8DCC4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		97646E2018B35C4400A8DCC4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				97646E1F18B35C4400A8DCC4 /* StudyJam.app */,
+				97646E4018B35C4400A8DCC4 /* StudyJamTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		97646E2118B35C4400A8DCC4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				97646E2218B35C4400A8DCC4 /* Foundation.framework */,
+				97646E2418B35C4400A8DCC4 /* CoreGraphics.framework */,
+				97646E2618B35C4400A8DCC4 /* UIKit.framework */,
+				97646E4118B35C4400A8DCC4 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		97646E2818B35C4400A8DCC4 /* StudyJam */ = {
+			isa = PBXGroup;
+			children = (
+				97646E3118B35C4400A8DCC4 /* AppDelegate.h */,
+				97646E3218B35C4400A8DCC4 /* AppDelegate.m */,
+				97646E3418B35C4400A8DCC4 /* Main.storyboard */,
+				97646E3718B35C4400A8DCC4 /* ViewController.h */,
+				97646E3818B35C4400A8DCC4 /* ViewController.m */,
+				97646E3A18B35C4400A8DCC4 /* Images.xcassets */,
+				97646E2918B35C4400A8DCC4 /* Supporting Files */,
+			);
+			path = StudyJam;
+			sourceTree = "<group>";
+		};
+		97646E2918B35C4400A8DCC4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				97646E2A18B35C4400A8DCC4 /* StudyJam-Info.plist */,
+				97646E2B18B35C4400A8DCC4 /* InfoPlist.strings */,
+				97646E2E18B35C4400A8DCC4 /* main.m */,
+				97646E3018B35C4400A8DCC4 /* StudyJam-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		97646E4718B35C4400A8DCC4 /* StudyJamTests */ = {
+			isa = PBXGroup;
+			children = (
+				97646E4D18B35C4400A8DCC4 /* StudyJamTests.m */,
+				97646E4818B35C4400A8DCC4 /* Supporting Files */,
+			);
+			path = StudyJamTests;
+			sourceTree = "<group>";
+		};
+		97646E4818B35C4400A8DCC4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				97646E4918B35C4400A8DCC4 /* StudyJamTests-Info.plist */,
+				97646E4A18B35C4400A8DCC4 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		97646E1E18B35C4400A8DCC4 /* StudyJam */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 97646E5118B35C4400A8DCC4 /* Build configuration list for PBXNativeTarget "StudyJam" */;
+			buildPhases = (
+				97646E1B18B35C4400A8DCC4 /* Sources */,
+				97646E1C18B35C4400A8DCC4 /* Frameworks */,
+				97646E1D18B35C4400A8DCC4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StudyJam;
+			productName = StudyJam;
+			productReference = 97646E1F18B35C4400A8DCC4 /* StudyJam.app */;
+			productType = "com.apple.product-type.application";
+		};
+		97646E3F18B35C4400A8DCC4 /* StudyJamTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 97646E5418B35C4400A8DCC4 /* Build configuration list for PBXNativeTarget "StudyJamTests" */;
+			buildPhases = (
+				97646E3C18B35C4400A8DCC4 /* Sources */,
+				97646E3D18B35C4400A8DCC4 /* Frameworks */,
+				97646E3E18B35C4400A8DCC4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				97646E4618B35C4400A8DCC4 /* PBXTargetDependency */,
+			);
+			name = StudyJamTests;
+			productName = StudyJamTests;
+			productReference = 97646E4018B35C4400A8DCC4 /* StudyJamTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		97646E1718B35C4400A8DCC4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "StudyJam, Inc.";
+				TargetAttributes = {
+					97646E3F18B35C4400A8DCC4 = {
+						TestTargetID = 97646E1E18B35C4400A8DCC4;
+					};
+				};
+			};
+			buildConfigurationList = 97646E1A18B35C4400A8DCC4 /* Build configuration list for PBXProject "StudyJam" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 97646E1618B35C4400A8DCC4;
+			productRefGroup = 97646E2018B35C4400A8DCC4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				97646E1E18B35C4400A8DCC4 /* StudyJam */,
+				97646E3F18B35C4400A8DCC4 /* StudyJamTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		97646E1D18B35C4400A8DCC4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97646E3B18B35C4400A8DCC4 /* Images.xcassets in Resources */,
+				97646E2D18B35C4400A8DCC4 /* InfoPlist.strings in Resources */,
+				97646E3618B35C4400A8DCC4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97646E3E18B35C4400A8DCC4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97646E4C18B35C4400A8DCC4 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		97646E1B18B35C4400A8DCC4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97646E3918B35C4400A8DCC4 /* ViewController.m in Sources */,
+				97646E3318B35C4400A8DCC4 /* AppDelegate.m in Sources */,
+				97646E2F18B35C4400A8DCC4 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97646E3C18B35C4400A8DCC4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97646E4E18B35C4400A8DCC4 /* StudyJamTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		97646E4618B35C4400A8DCC4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 97646E1E18B35C4400A8DCC4 /* StudyJam */;
+			targetProxy = 97646E4518B35C4400A8DCC4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		97646E2B18B35C4400A8DCC4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				97646E2C18B35C4400A8DCC4 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		97646E3418B35C4400A8DCC4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				97646E3518B35C4400A8DCC4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		97646E4A18B35C4400A8DCC4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				97646E4B18B35C4400A8DCC4 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		97646E4F18B35C4400A8DCC4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		97646E5018B35C4400A8DCC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		97646E5218B35C4400A8DCC4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "StudyJam/StudyJam-Prefix.pch";
+				INFOPLIST_FILE = "StudyJam/StudyJam-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		97646E5318B35C4400A8DCC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "StudyJam/StudyJam-Prefix.pch";
+				INFOPLIST_FILE = "StudyJam/StudyJam-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		97646E5518B35C4400A8DCC4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/StudyJam.app/StudyJam";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "StudyJam/StudyJam-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "StudyJamTests/StudyJamTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		97646E5618B35C4400A8DCC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/StudyJam.app/StudyJam";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "StudyJam/StudyJam-Prefix.pch";
+				INFOPLIST_FILE = "StudyJamTests/StudyJamTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		97646E1A18B35C4400A8DCC4 /* Build configuration list for PBXProject "StudyJam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97646E4F18B35C4400A8DCC4 /* Debug */,
+				97646E5018B35C4400A8DCC4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		97646E5118B35C4400A8DCC4 /* Build configuration list for PBXNativeTarget "StudyJam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97646E5218B35C4400A8DCC4 /* Debug */,
+				97646E5318B35C4400A8DCC4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		97646E5418B35C4400A8DCC4 /* Build configuration list for PBXNativeTarget "StudyJamTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97646E5518B35C4400A8DCC4 /* Debug */,
+				97646E5618B35C4400A8DCC4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 97646E1718B35C4400A8DCC4 /* Project object */;
+}
