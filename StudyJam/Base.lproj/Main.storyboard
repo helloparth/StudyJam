@@ -92,15 +92,47 @@
                             <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" currentPage="1" translatesAutoresizingMaskIntoConstraints="NO" id="ohj-su-iiZ">
                                 <rect key="frame" x="141" y="443" width="39" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
                                 <color key="pageIndicatorTintColor" cocoaTouchSystemColor="lightTextColor"/>
                             </pageControl>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5K-dV-jFE">
+                                <rect key="frame" x="0.0" y="113" width="320" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.50196081399917603" green="0.0" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="gEz-bt-mjt" appends="YES" id="Ys0-d5-XAU"/>
+                            <outletCollection property="gestureRecognizers" destination="1Yh-yJ-Ib0" appends="YES" id="2n6-uy-Dvs"/>
+                            <outletCollection property="gestureRecognizers" destination="xPw-fc-TcH" appends="YES" id="GMn-QA-uK7"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="FNs-Iv-QVh"/>
+                    <connections>
+                        <outlet property="studyLabel" destination="A5K-dV-jFE" id="FbJ-iB-aZ5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="gEz-bt-mjt">
+                    <connections>
+                        <action selector="detectTap:" destination="vXZ-lx-hvc" id="Iya-mv-OC1"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="1Yh-yJ-Ib0" userLabel="Down Swipe Gesture Recognizer">
+                    <connections>
+                        <action selector="detectDownSwipe:" destination="vXZ-lx-hvc" id="i0v-wN-8qQ"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="up" id="xPw-fc-TcH" userLabel="Up Swipe Gesture Recognizer">
+                    <connections>
+                        <action selector="detectUpSwipe:" destination="vXZ-lx-hvc" id="jom-bs-TVK"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="122" y="-296"/>
         </scene>

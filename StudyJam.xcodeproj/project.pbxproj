@@ -21,6 +21,7 @@
 		97646E4418B35C4400A8DCC4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97646E2618B35C4400A8DCC4 /* UIKit.framework */; };
 		97646E4C18B35C4400A8DCC4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 97646E4A18B35C4400A8DCC4 /* InfoPlist.strings */; };
 		97646E4E18B35C4400A8DCC4 /* StudyJamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 97646E4D18B35C4400A8DCC4 /* StudyJamTests.m */; };
+		97A9038418BCAEB900BDAD68 /* StudyState.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A9038318BCAEB900BDAD68 /* StudyState.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		97646E4918B35C4400A8DCC4 /* StudyJamTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StudyJamTests-Info.plist"; sourceTree = "<group>"; };
 		97646E4B18B35C4400A8DCC4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		97646E4D18B35C4400A8DCC4 /* StudyJamTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudyJamTests.m; sourceTree = "<group>"; };
+		97A9038218BCAEB900BDAD68 /* StudyState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StudyState.h; path = ../StudyState.h; sourceTree = "<group>"; };
+		97A9038318BCAEB900BDAD68 /* StudyState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StudyState.m; path = ../StudyState.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +115,8 @@
 		97646E2818B35C4400A8DCC4 /* StudyJam */ = {
 			isa = PBXGroup;
 			children = (
+				97A9038218BCAEB900BDAD68 /* StudyState.h */,
+				97A9038318BCAEB900BDAD68 /* StudyState.m */,
 				97646E3118B35C4400A8DCC4 /* AppDelegate.h */,
 				97646E3218B35C4400A8DCC4 /* AppDelegate.m */,
 				97646E3418B35C4400A8DCC4 /* Main.storyboard */,
@@ -250,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				97646E3918B35C4400A8DCC4 /* ViewController.m in Sources */,
+				97A9038418BCAEB900BDAD68 /* StudyState.m in Sources */,
 				97646E3318B35C4400A8DCC4 /* AppDelegate.m in Sources */,
 				97646E2F18B35C4400A8DCC4 /* main.m in Sources */,
 			);
@@ -460,6 +466,7 @@
 				97646E5318B35C4400A8DCC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		97646E5418B35C4400A8DCC4 /* Build configuration list for PBXNativeTarget "StudyJamTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +475,7 @@
 				97646E5618B35C4400A8DCC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

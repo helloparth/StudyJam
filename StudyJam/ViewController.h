@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+- (IBAction)detectUpSwipe:(id)sender;
+- (IBAction)detectDownSwipe:(id)sender;
+- (IBAction)detectTap:(id)sender;
 
 @end
