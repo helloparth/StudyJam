@@ -23,6 +23,7 @@
 		97646E4E18B35C4400A8DCC4 /* StudyJamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 97646E4D18B35C4400A8DCC4 /* StudyJamTests.m */; };
 		97A9038418BCAEB900BDAD68 /* StudyState.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A9038318BCAEB900BDAD68 /* StudyState.m */; };
 		97EA1E2418C2F10E00EACE30 /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97EA1E2318C2F10E00EACE30 /* FriendsViewController.m */; };
+		97EA1E2618C3046C00EACE30 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97EA1E2518C3046C00EACE30 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		97A9038318BCAEB900BDAD68 /* StudyState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StudyState.m; path = ../StudyState.m; sourceTree = "<group>"; };
 		97EA1E2218C2F10E00EACE30 /* FriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsViewController.h; sourceTree = "<group>"; };
 		97EA1E2318C2F10E00EACE30 /* FriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsViewController.m; sourceTree = "<group>"; };
+		97EA1E2518C3046C00EACE30 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97EA1E2618C3046C00EACE30 /* MapKit.framework in Frameworks */,
 				97646E2518B35C4400A8DCC4 /* CoreGraphics.framework in Frameworks */,
 				97646E2718B35C4400A8DCC4 /* UIKit.framework in Frameworks */,
 				97646E2318B35C4400A8DCC4 /* Foundation.framework in Frameworks */,
@@ -107,6 +110,7 @@
 		97646E2118B35C4400A8DCC4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				97EA1E2518C3046C00EACE30 /* MapKit.framework */,
 				97646E2218B35C4400A8DCC4 /* Foundation.framework */,
 				97646E2418B35C4400A8DCC4 /* CoreGraphics.framework */,
 				97646E2618B35C4400A8DCC4 /* UIKit.framework */,
