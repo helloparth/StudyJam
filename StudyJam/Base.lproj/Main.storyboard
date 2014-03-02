@@ -136,10 +136,10 @@
             </objects>
             <point key="canvasLocation" x="122" y="-296"/>
         </scene>
-        <!--View Controller-->
+        <!--Friends View Controller-->
         <scene sceneID="o6s-iO-4OJ">
             <objects>
-                <viewController id="qt4-HE-ou2" sceneMemberID="viewController">
+                <viewController id="qt4-HE-ou2" customClass="FriendsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xUt-jD-rws"/>
                         <viewControllerLayoutGuide type="bottom" id="U1q-dV-Kc8"/>

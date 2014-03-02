@@ -22,6 +22,7 @@
 		97646E4C18B35C4400A8DCC4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 97646E4A18B35C4400A8DCC4 /* InfoPlist.strings */; };
 		97646E4E18B35C4400A8DCC4 /* StudyJamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 97646E4D18B35C4400A8DCC4 /* StudyJamTests.m */; };
 		97A9038418BCAEB900BDAD68 /* StudyState.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A9038318BCAEB900BDAD68 /* StudyState.m */; };
+		97EA1E2418C2F10E00EACE30 /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97EA1E2318C2F10E00EACE30 /* FriendsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		97646E4D18B35C4400A8DCC4 /* StudyJamTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudyJamTests.m; sourceTree = "<group>"; };
 		97A9038218BCAEB900BDAD68 /* StudyState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StudyState.h; path = ../StudyState.h; sourceTree = "<group>"; };
 		97A9038318BCAEB900BDAD68 /* StudyState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StudyState.m; path = ../StudyState.m; sourceTree = "<group>"; };
+		97EA1E2218C2F10E00EACE30 /* FriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsViewController.h; sourceTree = "<group>"; };
+		97EA1E2318C2F10E00EACE30 /* FriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +125,8 @@
 				97646E3418B35C4400A8DCC4 /* Main.storyboard */,
 				97646E3718B35C4400A8DCC4 /* StudyViewController.h */,
 				97646E3818B35C4400A8DCC4 /* StudyViewController.m */,
+				97EA1E2218C2F10E00EACE30 /* FriendsViewController.h */,
+				97EA1E2318C2F10E00EACE30 /* FriendsViewController.m */,
 				97646E3A18B35C4400A8DCC4 /* Images.xcassets */,
 				97646E2918B35C4400A8DCC4 /* Supporting Files */,
 			);
@@ -256,6 +261,7 @@
 			files = (
 				97646E3918B35C4400A8DCC4 /* StudyViewController.m in Sources */,
 				97A9038418BCAEB900BDAD68 /* StudyState.m in Sources */,
+				97EA1E2418C2F10E00EACE30 /* FriendsViewController.m in Sources */,
 				97646E3318B35C4400A8DCC4 /* AppDelegate.m in Sources */,
 				97646E2F18B35C4400A8DCC4 /* main.m in Sources */,
 			);
