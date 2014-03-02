@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
@@ -52,10 +52,10 @@
             </objects>
             <point key="canvasLocation" x="-324" y="-289"/>
         </scene>
-        <!--View Controller - Slider-->
+        <!--Study View Controller - Slider-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController title="Slider" id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                <viewController title="Slider" id="vXZ-lx-hvc" customClass="StudyViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ILX-9x-ywl"/>
                         <viewControllerLayoutGuide type="bottom" id="WVH-2x-eXm"/>
@@ -200,6 +200,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="G0z-Rj-3ad"/>
+        <segue reference="9e9-fY-MEs"/>
     </inferredMetricsTieBreakers>
 </document>

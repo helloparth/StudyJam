@@ -6,17 +6,17 @@
 //  Copyright (c) 2014 StudyJam, Inc. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "StudyViewController.h"
 #import "StudyState.h"
 
 static const NSTimeInterval FOCUS_ANIMATION_DURATION = 1.00;
 
-@interface ViewController ()
+@interface StudyViewController ()
 @property StudyState *studyState;
 @property IBOutlet UILabel *studyLabel;
 @end
 
-@implementation ViewController
+@implementation StudyViewController
 
 - (void)viewDidLoad
 {
