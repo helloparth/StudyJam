@@ -7,9 +7,11 @@
 //
 
 #import "FriendsViewController.h"
+#import <AddressBook/AddressBook.h>
 
 @interface FriendsViewController ()
-
+@property NSArray *allPeople;
+@property UIScreenEdgePanGestureRecognizer *swipeInLeftGestureRecognizer;
 @end
 
 @implementation FriendsViewController
@@ -26,8 +28,21 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
-    NSLog(@"Friends");
+    _swipeInLeftGestureRecognizer = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeInFromLeftEdge:)];
+    [_swipeInLeftGestureRecognizer setEdges:UIRectEdgeLeft];
+    [self.view addGestureRecognizer:_swipeInLeftGestureRecognizer];
+    
+    CFErrorRef error = NULL;
+    ABAddressBookRef addressBook = ABAddressBookCreateWithOptions(NULL, &error);
+    if (addressBook != nil) {
+        _allPeople = (__bridge_transfer NSArray *)ABAddressBookCopyArrayOfAllPeople(addressBook);
+    } else {
+        NSLog(@"Error retrieving address book");
+    }
+}
+
+- (IBAction)handleSwipeInFromLeftEdge:(id)sender {
+   [self.navigationController popToRootViewControllerAnimated:NO];
 }
 
 - (void)didReceiveMemoryWarning

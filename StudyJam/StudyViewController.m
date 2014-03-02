@@ -14,6 +14,8 @@ static const NSTimeInterval FOCUS_ANIMATION_DURATION = 1.00;
 @interface StudyViewController ()
 @property StudyState *studyState;
 @property IBOutlet UILabel *studyLabel;
+@property UIScreenEdgePanGestureRecognizer *swipeInLeftGestureRecognizer;
+@property UIScreenEdgePanGestureRecognizer *swipeInRightGestureRecognizer;
 @end
 
 @implementation StudyViewController
@@ -22,6 +24,15 @@ static const NSTimeInterval FOCUS_ANIMATION_DURATION = 1.00;
 {
     [super viewDidLoad];
 	_studyState = [StudyState new];
+    
+    // FIXME: Figure out how to limit calls to the delegate
+    _swipeInLeftGestureRecognizer = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeInFromLeftEdge:)];
+    [_swipeInLeftGestureRecognizer setEdges:UIRectEdgeLeft];
+    [self.view addGestureRecognizer:_swipeInLeftGestureRecognizer];
+    
+    _swipeInRightGestureRecognizer = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeInFromRightEdge:)];
+    [_swipeInRightGestureRecognizer setEdges:UIRectEdgeRight];
+    [self.view addGestureRecognizer:_swipeInRightGestureRecognizer];
 }
 
 - (void)didReceiveMemoryWarning
@@ -29,6 +40,16 @@ static const NSTimeInterval FOCUS_ANIMATION_DURATION = 1.00;
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (IBAction)handleSwipeInFromLeftEdge:(id)sender {
+    [self performSegueWithIdentifier:@"Map" sender:self];
+}
+
+- (IBAction)handleSwipeInFromRightEdge:(id)sender {
+    [self performSegueWithIdentifier:@"Friends" sender:self];
+}
+
+
 - (IBAction)detectUpSwipe:(id)sender {
     [_studyState increaseFocus];
     [_studyLabel setText:[NSString stringWithFormat:@"StudyLevel %d", _studyState.studyLevel]];

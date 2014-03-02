@@ -24,6 +24,7 @@
 		97A9038418BCAEB900BDAD68 /* StudyState.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A9038318BCAEB900BDAD68 /* StudyState.m */; };
 		97EA1E2418C2F10E00EACE30 /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97EA1E2318C2F10E00EACE30 /* FriendsViewController.m */; };
 		97EA1E2618C3046C00EACE30 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97EA1E2518C3046C00EACE30 /* MapKit.framework */; };
+		97EA1E2918C3066100EACE30 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97EA1E2818C3066100EACE30 /* MapViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,8 @@
 		97EA1E2218C2F10E00EACE30 /* FriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsViewController.h; sourceTree = "<group>"; };
 		97EA1E2318C2F10E00EACE30 /* FriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsViewController.m; sourceTree = "<group>"; };
 		97EA1E2518C3046C00EACE30 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		97EA1E2718C3066100EACE30 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		97EA1E2818C3066100EACE30 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +132,8 @@
 				97646E3418B35C4400A8DCC4 /* Main.storyboard */,
 				97646E3718B35C4400A8DCC4 /* StudyViewController.h */,
 				97646E3818B35C4400A8DCC4 /* StudyViewController.m */,
+				97EA1E2718C3066100EACE30 /* MapViewController.h */,
+				97EA1E2818C3066100EACE30 /* MapViewController.m */,
 				97EA1E2218C2F10E00EACE30 /* FriendsViewController.h */,
 				97EA1E2318C2F10E00EACE30 /* FriendsViewController.m */,
 				97646E3A18B35C4400A8DCC4 /* Images.xcassets */,
@@ -266,6 +271,7 @@
 				97646E3918B35C4400A8DCC4 /* StudyViewController.m in Sources */,
 				97A9038418BCAEB900BDAD68 /* StudyState.m in Sources */,
 				97EA1E2418C2F10E00EACE30 /* FriendsViewController.m in Sources */,
+				97EA1E2918C3066100EACE30 /* MapViewController.m in Sources */,
 				97646E3318B35C4400A8DCC4 /* AppDelegate.m in Sources */,
 				97646E2F18B35C4400A8DCC4 /* main.m in Sources */,
 			);
