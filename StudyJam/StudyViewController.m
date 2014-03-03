@@ -41,12 +41,16 @@ static const NSTimeInterval FOCUS_ANIMATION_DURATION = 1.00;
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)handleSwipeInFromLeftEdge:(id)sender {
-    [self performSegueWithIdentifier:@"Map" sender:self];
+- (void)handleSwipeInFromLeftEdge:(UIGestureRecognizer*)recognizer {
+    if (recognizer.state == UIGestureRecognizerStateEnded) {
+        [self performSegueWithIdentifier:@"Map" sender:self];
+    }
 }
 
-- (IBAction)handleSwipeInFromRightEdge:(id)sender {
-    [self performSegueWithIdentifier:@"Friends" sender:self];
+- (void)handleSwipeInFromRightEdge:(UIGestureRecognizer*)recognizer {
+    if (recognizer.state == UIGestureRecognizerStateEnded) {
+        [self performSegueWithIdentifier:@"Friends" sender:self];
+    }
 }
 
 
