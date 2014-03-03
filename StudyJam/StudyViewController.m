@@ -72,7 +72,7 @@ static const NSTimeInterval FOCUS_ANIMATION_DURATION = 1.00;
     _studyLabel.alpha = 1.0;
     [UIView animateWithDuration:1.0
                           delay:0
-                        options:UIViewAnimationCurveEaseInOut
+                        options:UIViewAnimationOptionCurveEaseInOut
                      animations:^{
                          _studyLabel.alpha = 0.0;
                      }
