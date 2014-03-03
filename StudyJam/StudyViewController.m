@@ -77,6 +77,7 @@ static const NSTimeInterval FOCUS_ANIMATION_DURATION = 1.00;
                          _studyLabel.alpha = 0.0;
                      }
                      completion:^(BOOL finished){
+                         
                      }];
 }
 
@@ -87,10 +88,14 @@ static const NSTimeInterval FOCUS_ANIMATION_DURATION = 1.00;
             break;
             
         case 1:
-            return [UIColor orangeColor];
+            return [UIColor yellowColor];
             break;
             
         case 2:
+            return [UIColor orangeColor];
+            break;
+            
+        case 3:
             return [UIColor redColor];
             break;
             
@@ -98,6 +103,5 @@ static const NSTimeInterval FOCUS_ANIMATION_DURATION = 1.00;
             return [UIColor whiteColor];
     }
 }
-
     
 @end
