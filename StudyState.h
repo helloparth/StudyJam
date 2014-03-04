@@ -14,5 +14,5 @@
 
 -(void) increaseFocus;
 -(void) decreaseFocus;
-
+-(UIColor*) getStudyLevelColor;
 @end

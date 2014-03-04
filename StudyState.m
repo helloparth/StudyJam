@@ -24,4 +24,28 @@ static const int MIN_STUDY_LEVEL = 0;
     }
 }
 
+- (UIColor*)getStudyLevelColor {
+    switch (self.studyLevel) {
+        case 0:
+            return [UIColor greenColor];
+            break;
+            
+        case 1:
+            return [UIColor yellowColor];
+            break;
+            
+        case 2:
+            return [UIColor orangeColor];
+            break;
+            
+        case 3:
+            return [UIColor redColor];
+            break;
+            
+        default:
+            return [UIColor whiteColor];
+    }
+}
+
+
 @end

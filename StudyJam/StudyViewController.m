@@ -59,7 +59,7 @@ static const NSTimeInterval FOCUS_ANIMATION_DURATION = 1.00;
     [_studyLabel setText:[NSString stringWithFormat:@"StudyLevel %d", _studyState.studyLevel]];
     
     [UIView animateWithDuration: FOCUS_ANIMATION_DURATION animations: ^{
-        self.view.backgroundColor = [self getColorForFocusLevel:_studyState];
+        self.view.backgroundColor = [_studyState getStudyLevelColor];
     }];
 }
 
@@ -68,7 +68,7 @@ static const NSTimeInterval FOCUS_ANIMATION_DURATION = 1.00;
     [_studyLabel setText:[NSString stringWithFormat:@"StudyLevel %d", _studyState.studyLevel]];
     
     [UIView animateWithDuration: FOCUS_ANIMATION_DURATION animations: ^{
-        self.view.backgroundColor = [self getColorForFocusLevel:_studyState];
+        self.view.backgroundColor = [_studyState getStudyLevelColor];
     }];
 }
 
@@ -85,27 +85,5 @@ static const NSTimeInterval FOCUS_ANIMATION_DURATION = 1.00;
                      }];
 }
 
-- (id)getColorForFocusLevel: (StudyState *) state {
-    switch (state.studyLevel) {
-        case 0:
-            return [UIColor greenColor];
-            break;
-            
-        case 1:
-            return [UIColor yellowColor];
-            break;
-            
-        case 2:
-            return [UIColor orangeColor];
-            break;
-            
-        case 3:
-            return [UIColor redColor];
-            break;
-            
-        default:
-            return [UIColor whiteColor];
-    }
-}
     
 @end
