@@ -87,8 +87,8 @@
                     <navigationItem key="navigationItem" id="FNs-Iv-QVh"/>
                     <connections>
                         <outlet property="studyLabel" destination="A5K-dV-jFE" id="FbJ-iB-aZ5"/>
-                        <segue destination="sKs-yk-PXf" kind="push" identifier="Map" id="UbU-vW-wKw"/>
-                        <segue destination="qt4-HE-ou2" kind="push" identifier="Friends" id="Mz7-8J-oZM"/>
+                        <segue destination="sKs-yk-PXf" kind="custom" identifier="Map" customClass="ZHCustomSegue" id="UbU-vW-wKw"/>
+                        <segue destination="qt4-HE-ou2" kind="push" identifier="Friends" customClass="ZHCustomSegue" id="Mz7-8J-oZM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -144,10 +144,13 @@
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="CHW-TP-flt">
                                         <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CHW-TP-flt">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CHW-TP-flt" id="Yv6-fi-n1C">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="vXZ-lx-hvc" kind="custom" identifier="FromFrenzToMain" customClass="ZHCustomSegue" id="dx8-h0-obz"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="xvC-dc-atX">
                                         <rect key="frame" x="0.0" y="66" width="320" height="44"/>
@@ -174,11 +177,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mpB-lC-cbY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1055" y="-352"/>
+            <point key="canvasLocation" x="1071" y="-600"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aqK-Ff-5qS">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FOQ-RP-85y" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="ZCT-rU-Ye6" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Tx4-2p-utC">
@@ -190,7 +194,6 @@
                         <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="kzF-op-5Ma"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FOQ-RP-85y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="478" y="-1016"/>
         </scene>
@@ -200,4 +203,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="kzF-op-5Ma"/>
+    </inferredMetricsTieBreakers>
 </document>

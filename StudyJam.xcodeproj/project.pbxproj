@@ -25,6 +25,7 @@
 		97EA1E2418C2F10E00EACE30 /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97EA1E2318C2F10E00EACE30 /* FriendsViewController.m */; };
 		97EA1E2618C3046C00EACE30 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97EA1E2518C3046C00EACE30 /* MapKit.framework */; };
 		97EA1E2918C3066100EACE30 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97EA1E2818C3066100EACE30 /* MapViewController.m */; };
+		D894576E18C704230007C905 /* ZHCustomSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D894576D18C704230007C905 /* ZHCustomSegue.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,8 @@
 		97EA1E2518C3046C00EACE30 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		97EA1E2718C3066100EACE30 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		97EA1E2818C3066100EACE30 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		D894576C18C704230007C905 /* ZHCustomSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHCustomSegue.h; sourceTree = "<group>"; };
+		D894576D18C704230007C905 /* ZHCustomSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHCustomSegue.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +133,8 @@
 				97646E3118B35C4400A8DCC4 /* AppDelegate.h */,
 				97646E3218B35C4400A8DCC4 /* AppDelegate.m */,
 				97646E3418B35C4400A8DCC4 /* Main.storyboard */,
+				D894576C18C704230007C905 /* ZHCustomSegue.h */,
+				D894576D18C704230007C905 /* ZHCustomSegue.m */,
 				97646E3718B35C4400A8DCC4 /* StudyViewController.h */,
 				97646E3818B35C4400A8DCC4 /* StudyViewController.m */,
 				97EA1E2718C3066100EACE30 /* MapViewController.h */,
@@ -273,6 +278,7 @@
 				97EA1E2418C2F10E00EACE30 /* FriendsViewController.m in Sources */,
 				97EA1E2918C3066100EACE30 /* MapViewController.m in Sources */,
 				97646E3318B35C4400A8DCC4 /* AppDelegate.m in Sources */,
+				D894576E18C704230007C905 /* ZHCustomSegue.m in Sources */,
 				97646E2F18B35C4400A8DCC4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
