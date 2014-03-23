@@ -9,6 +9,7 @@
 #import "MapViewController.h"
 
 @interface MapViewController ()
+
 @property UIScreenEdgePanGestureRecognizer *swipeInRightGestureRecognizer;
 @end
 
@@ -42,4 +43,15 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)zoomIn:(id)sender {
+    MKUserLocation *userLocation = _mapView.userLocation;
+    MKCoordinateRegion region =
+    MKCoordinateRegionMakeWithDistance (
+                                        userLocation.location.coordinate, 2000, 2000);
+    [_mapView setRegion:region animated:NO];
+}
+- (IBAction)toMain:(id)sender {
+    [self.navigationController popToRootViewControllerAnimated:YES];
+    
+}
 @end

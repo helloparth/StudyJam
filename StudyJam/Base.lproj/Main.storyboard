@@ -16,34 +16,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jMJ-9Y-oVX">
-                                <rect key="frame" x="126" y="214" width="68" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="30"/>
-                                <inset key="titleEdgeInsets" minX="1" minY="1" maxX="1" maxY="1"/>
-                                <size key="titleShadowOffset" width="5" height="0.0"/>
-                                <state key="normal" title="Map">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="9"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="g3d-a7-Icc">
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="g3d-a7-Icc">
                                 <rect key="frame" x="141" y="443" width="39" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="pageIndicatorTintColor" cocoaTouchSystemColor="lightTextColor"/>
                             </pageControl>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="0eg-x4-bVa">
-                                <rect key="frame" x="40" y="275" width="240" height="128"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0eg-x4-bVa">
+                                <rect key="frame" x="0.0" y="20" width="320" height="388"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </mapView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ClW-Wj-Wjv">
+                                <rect key="frame" x="0.0" y="408" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Zoom" width="142" id="dda-Xm-gBg">
+                                        <connections>
+                                            <action selector="zoomIn:" destination="sKs-yk-PXf" id="b78-RO-N5O"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Back" width="180" id="9pV-yz-Eyt">
+                                        <connections>
+                                            <action selector="toMain:" destination="sKs-yk-PXf" id="typ-TJ-qVv"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" red="0.80000001192092896" green="0.40000000596046448" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="0eg-x4-bVa" firstAttribute="top" secondItem="WPf-d3-Zyk" secondAttribute="top" constant="20" symbolic="YES" id="Huc-EZ-WAG"/>
+                            <constraint firstItem="ClW-Wj-Wjv" firstAttribute="centerX" secondItem="g3d-a7-Icc" secondAttribute="centerX" id="NfO-4Q-UAn"/>
+                            <constraint firstItem="zLA-ze-7WW" firstAttribute="top" secondItem="ClW-Wj-Wjv" secondAttribute="bottom" constant="28" id="Psk-ZM-rAn"/>
+                            <constraint firstAttribute="bottom" secondItem="g3d-a7-Icc" secondAttribute="bottom" id="Vb9-8b-E27"/>
+                            <constraint firstItem="0eg-x4-bVa" firstAttribute="leading" secondItem="WPf-d3-Zyk" secondAttribute="leading" id="XBd-0L-1O7"/>
+                            <constraint firstAttribute="trailing" secondItem="0eg-x4-bVa" secondAttribute="trailing" id="dId-Ze-dgu"/>
+                            <constraint firstItem="ClW-Wj-Wjv" firstAttribute="trailing" secondItem="0eg-x4-bVa" secondAttribute="trailing" id="m77-rQ-f6V"/>
+                            <constraint firstItem="ClW-Wj-Wjv" firstAttribute="top" secondItem="0eg-x4-bVa" secondAttribute="bottom" id="myR-kj-boC"/>
+                            <constraint firstItem="ClW-Wj-Wjv" firstAttribute="leading" secondItem="0eg-x4-bVa" secondAttribute="leading" id="vqM-bf-9Cq"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ktk-th-yxs"/>
+                    <connections>
+                        <outlet property="mapView" destination="0eg-x4-bVa" id="b06-fx-j59"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e0J-qe-zO8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -182,7 +197,6 @@
         <!--Navigation Controller-->
         <scene sceneID="aqK-Ff-5qS">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FOQ-RP-85y" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="ZCT-rU-Ye6" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Tx4-2p-utC">
@@ -194,6 +208,7 @@
                         <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="kzF-op-5Ma"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FOQ-RP-85y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="478" y="-1016"/>
         </scene>
