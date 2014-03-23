@@ -26,6 +26,8 @@
 		97EA1E2618C3046C00EACE30 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97EA1E2518C3046C00EACE30 /* MapKit.framework */; };
 		97EA1E2918C3066100EACE30 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97EA1E2818C3066100EACE30 /* MapViewController.m */; };
 		D894576E18C704230007C905 /* ZHCustomSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D894576D18C704230007C905 /* ZHCustomSegue.m */; };
+		D8FCBB6718DFA56C00B6C398 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8FCBB6618DFA56C00B6C398 /* AddressBookUI.framework */; };
+		D8FCBB6918DFA57900B6C398 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8FCBB6818DFA57900B6C398 /* AddressBook.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		97EA1E2818C3066100EACE30 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		D894576C18C704230007C905 /* ZHCustomSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHCustomSegue.h; sourceTree = "<group>"; };
 		D894576D18C704230007C905 /* ZHCustomSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHCustomSegue.m; sourceTree = "<group>"; };
+		D8FCBB6618DFA56C00B6C398 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		D8FCBB6818DFA57900B6C398 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8FCBB6918DFA57900B6C398 /* AddressBook.framework in Frameworks */,
+				D8FCBB6718DFA56C00B6C398 /* AddressBookUI.framework in Frameworks */,
 				97EA1E2618C3046C00EACE30 /* MapKit.framework in Frameworks */,
 				97646E2518B35C4400A8DCC4 /* CoreGraphics.framework in Frameworks */,
 				97646E2718B35C4400A8DCC4 /* UIKit.framework in Frameworks */,
@@ -116,6 +122,8 @@
 		97646E2118B35C4400A8DCC4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D8FCBB6818DFA57900B6C398 /* AddressBook.framework */,
+				D8FCBB6618DFA56C00B6C398 /* AddressBookUI.framework */,
 				97EA1E2518C3046C00EACE30 /* MapKit.framework */,
 				97646E2218B35C4400A8DCC4 /* Foundation.framework */,
 				97646E2418B35C4400A8DCC4 /* CoreGraphics.framework */,

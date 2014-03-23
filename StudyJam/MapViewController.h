@@ -9,11 +9,15 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 
-@interface MapViewController : UIViewController <UIGestureRecognizerDelegate>
+@interface MapViewController : UIViewController <UIGestureRecognizerDelegate, MKMapViewDelegate>
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *locationButton;
+
 
 
 @property UIScreenEdgePanGestureRecognizer *swipeInRightGestureRecognizer;
-- (IBAction)zoomIn:(id)sender;
+
+- (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation;
+- (IBAction)zoomIn:(UIBarButtonItem *)sender;
 - (IBAction)toMain:(id)sender;
 - (IBAction)changeMap:(id)sender;
 

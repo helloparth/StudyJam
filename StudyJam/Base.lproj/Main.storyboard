@@ -29,9 +29,9 @@
                                 <rect key="frame" x="0.0" y="408" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="Zoom" width="95" id="dda-Xm-gBg">
+                                    <barButtonItem title="My Location" width="95" id="dda-Xm-gBg">
                                         <connections>
-                                            <action selector="zoomIn:" destination="sKs-yk-PXf" id="b78-RO-N5O"/>
+                                            <action selector="zoomIn:" destination="sKs-yk-PXf" id="H6a-H3-gxM"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem title="Map" width="89" id="DM1-qt-CA9">

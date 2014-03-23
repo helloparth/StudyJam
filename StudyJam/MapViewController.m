@@ -31,11 +31,15 @@
     [_mapView addGestureRecognizer:_swipeInRightGestureRecognizer];
     _swipeInRightGestureRecognizer.delegate = self;
     self.view.backgroundColor = [UIColor blackColor];
+    
+    _mapView.showsUserLocation = YES;
+    _mapView.delegate = self;
+    
 
 }
 
 - (IBAction)handleSwipeInFromRightEdge:(id)sender {
-    [self.navigationController popToRootViewControllerAnimated:NO];
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -46,10 +50,8 @@
 
 - (IBAction)zoomIn:(id)sender {
     MKUserLocation *userLocation = _mapView.userLocation;
-    MKCoordinateRegion region =
-    MKCoordinateRegionMakeWithDistance (
-                                        userLocation.location.coordinate, 2000, 2000);
-    [_mapView setRegion:region animated:YES];
+    [self mapView: _mapView didUpdateUserLocation: userLocation];
+    
 }
 - (IBAction)toMain:(id)sender {
     [self.navigationController popToRootViewControllerAnimated:YES];
@@ -66,4 +68,13 @@
     return YES;
 }
 
+-(void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
+{
+    MKCoordinateRegion mapRegion;
+    mapRegion.center = mapView.userLocation.coordinate;
+    mapRegion.span.latitudeDelta = 0.01;
+    mapRegion.span.longitudeDelta = 0.01;
+    
+    [mapView setRegion:mapRegion animated: YES];
+}
 @end
