@@ -13,6 +13,8 @@
 
 - (IBAction)zoomIn:(id)sender;
 - (IBAction)toMain:(id)sender;
+- (IBAction)changeMap:(id)sender;
+
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
 @end

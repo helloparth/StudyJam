@@ -29,12 +29,17 @@
                                 <rect key="frame" x="0.0" y="408" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="Zoom" width="142" id="dda-Xm-gBg">
+                                    <barButtonItem title="Zoom" width="95" id="dda-Xm-gBg">
                                         <connections>
                                             <action selector="zoomIn:" destination="sKs-yk-PXf" id="b78-RO-N5O"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="Back" width="180" id="9pV-yz-Eyt">
+                                    <barButtonItem title="Map" width="89" id="DM1-qt-CA9">
+                                        <connections>
+                                            <action selector="changeMap:" destination="sKs-yk-PXf" id="1Xc-U4-0j2"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Back" width="100" id="9pV-yz-Eyt">
                                         <connections>
                                             <action selector="toMain:" destination="sKs-yk-PXf" id="typ-TJ-qVv"/>
                                         </connections>
