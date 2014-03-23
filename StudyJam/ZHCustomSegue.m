@@ -13,6 +13,8 @@
 
 @implementation ZHCustomSegue
 
+// Not gonna lie, i have no idea how this actually works. I found the code for this at:
+// http://blog.jambura.com/2012/07/05/custom-segue-animation-left-to-right-using-catransition/
 
 -(void)perform {
     
