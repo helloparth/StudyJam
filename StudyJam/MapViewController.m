@@ -8,11 +8,9 @@
 
 #import "MapViewController.h"
 
-@interface MapViewController ()
 
 
-@property UIScreenEdgePanGestureRecognizer *swipeInRightGestureRecognizer;
-@end
+
 
 @implementation MapViewController
 
@@ -30,7 +28,9 @@
     [super viewDidLoad];
     _swipeInRightGestureRecognizer = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeInFromRightEdge:)];
     [_swipeInRightGestureRecognizer setEdges:UIRectEdgeRight];
-    [self.view addGestureRecognizer:_swipeInRightGestureRecognizer];
+    [_mapView addGestureRecognizer:_swipeInRightGestureRecognizer];
+    _swipeInRightGestureRecognizer.delegate = self;
+    self.view.backgroundColor = [UIColor blackColor];
 
 }
 
@@ -61,4 +61,9 @@
     else
         _mapView.mapType = MKMapTypeStandard;
 }
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer{
+    return YES;
+}
+
 @end

@@ -10,4 +10,6 @@
 
 @interface FriendsViewController : UIViewController
 
+@property (nonatomic, strong) NSArray *myContacts;
+
 @end

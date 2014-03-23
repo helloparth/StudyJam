@@ -42,7 +42,7 @@
 }
 
 - (IBAction)handleSwipeInFromLeftEdge:(id)sender {
-   [self.navigationController popToRootViewControllerAnimated:NO];
+   [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning
