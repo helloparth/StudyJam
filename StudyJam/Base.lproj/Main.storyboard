@@ -29,19 +29,14 @@
                                 <rect key="frame" x="0.0" y="408" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="My Location" width="95" id="dda-Xm-gBg">
+                                    <barButtonItem title="My Location" width="137" id="dda-Xm-gBg">
                                         <connections>
                                             <action selector="zoomIn:" destination="sKs-yk-PXf" id="H6a-H3-gxM"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="Map" width="89" id="DM1-qt-CA9">
+                                    <barButtonItem title="Map" width="177" id="DM1-qt-CA9">
                                         <connections>
                                             <action selector="changeMap:" destination="sKs-yk-PXf" id="1Xc-U4-0j2"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem title="Back" width="100" id="9pV-yz-Eyt">
-                                        <connections>
-                                            <action selector="toMain:" destination="sKs-yk-PXf" id="typ-TJ-qVv"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -190,6 +185,15 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JcH-SH-i6H">
+                                <rect key="frame" x="270" y="13" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.41637436224489799" green="0.0" blue="0.21255910141132339" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -224,6 +228,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="kzF-op-5Ma"/>
+        <segue reference="dx8-h0-obz"/>
     </inferredMetricsTieBreakers>
 </document>
