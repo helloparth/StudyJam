@@ -7,8 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AddressBookUI/AddressBookUI.h>
 
-@interface FriendsViewController : UIViewController
+@interface FriendsViewController : UIViewController <ABPeoplePickerNavigationControllerDelegate>
+@property (weak, nonatomic) IBOutlet UILabel *firstName;
+@property (weak, nonatomic) IBOutlet UILabel *phoneNumber;
+
+- (IBAction)addFriend:(id)sender;
+
 
 @property (nonatomic, strong) NSArray *myContacts;
 
