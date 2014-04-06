@@ -26,6 +26,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    
+    
     _swipeInRightGestureRecognizer = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeInFromRightEdge:)];
     [_swipeInRightGestureRecognizer setEdges:UIRectEdgeRight];
     [_mapView addGestureRecognizer:_swipeInRightGestureRecognizer];
@@ -40,6 +43,7 @@
 
 - (IBAction)handleSwipeInFromRightEdge:(id)sender {
     [self.navigationController popToRootViewControllerAnimated:YES];
+
 }
 
 - (void)didReceiveMemoryWarning
