@@ -184,7 +184,7 @@
             <objects>
                 <tabBarController definesPresentationContext="YES" id="bRs-gZ-wxb" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="17L-3R-pRr"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="ksx-f4-c3r">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -275,11 +275,13 @@
             </objects>
             <point key="canvasLocation" x="478" y="-1016"/>
         </scene>
-        <!--Navigation Controller - Item-->
+        <!--Navigation Controller - Individual-->
         <scene sceneID="qgu-Zq-dJ2">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ct2-if-47U" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="g46-1f-M6L"/>
+                    <tabBarItem key="tabBarItem" title="Individual" image="individual.png" id="g46-1f-M6L">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="iAi-vW-MWS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -294,11 +296,11 @@
             </objects>
             <point key="canvasLocation" x="1758" y="-409"/>
         </scene>
-        <!--Navigation Controller - Item-->
+        <!--Navigation Controller - Group-->
         <scene sceneID="Izq-XU-xlO">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0fW-gi-pbj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Ikh-sY-Ufm"/>
+                    <tabBarItem key="tabBarItem" title="Group" image="group.png" id="Ikh-sY-Ufm"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="yNb-SE-oqi">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -314,6 +316,10 @@
             <point key="canvasLocation" x="1758" y="175"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="group.png" width="48" height="48"/>
+        <image name="individual.png" width="32" height="32"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

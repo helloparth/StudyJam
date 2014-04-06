@@ -25,6 +25,8 @@
 		97EA1E2418C2F10E00EACE30 /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97EA1E2318C2F10E00EACE30 /* FriendsViewController.m */; };
 		97EA1E2618C3046C00EACE30 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97EA1E2518C3046C00EACE30 /* MapKit.framework */; };
 		97EA1E2918C3066100EACE30 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97EA1E2818C3066100EACE30 /* MapViewController.m */; };
+		D8365ECE18F124B900CDD154 /* group.png in Resources */ = {isa = PBXBuildFile; fileRef = D8365ECC18F124B900CDD154 /* group.png */; };
+		D8365ECF18F124B900CDD154 /* individual.png in Resources */ = {isa = PBXBuildFile; fileRef = D8365ECD18F124B900CDD154 /* individual.png */; };
 		D894576E18C704230007C905 /* ZHCustomSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D894576D18C704230007C905 /* ZHCustomSegue.m */; };
 		D8FCBB6718DFA56C00B6C398 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8FCBB6618DFA56C00B6C398 /* AddressBookUI.framework */; };
 		D8FCBB6918DFA57900B6C398 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8FCBB6818DFA57900B6C398 /* AddressBook.framework */; };
@@ -67,6 +69,8 @@
 		97EA1E2518C3046C00EACE30 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		97EA1E2718C3066100EACE30 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		97EA1E2818C3066100EACE30 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		D8365ECC18F124B900CDD154 /* group.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = group.png; sourceTree = "<group>"; };
+		D8365ECD18F124B900CDD154 /* individual.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = individual.png; sourceTree = "<group>"; };
 		D894576C18C704230007C905 /* ZHCustomSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHCustomSegue.h; sourceTree = "<group>"; };
 		D894576D18C704230007C905 /* ZHCustomSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHCustomSegue.m; sourceTree = "<group>"; };
 		D8FCBB6618DFA56C00B6C398 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
@@ -103,6 +107,7 @@
 		97646E1618B35C4400A8DCC4 = {
 			isa = PBXGroup;
 			children = (
+				D8365ECB18F124B900CDD154 /* Images */,
 				97646E2818B35C4400A8DCC4 /* StudyJam */,
 				97646E4718B35C4400A8DCC4 /* StudyJamTests */,
 				97646E2118B35C4400A8DCC4 /* Frameworks */,
@@ -184,6 +189,16 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		D8365ECB18F124B900CDD154 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				D8365ECC18F124B900CDD154 /* group.png */,
+				D8365ECD18F124B900CDD154 /* individual.png */,
+			);
+			name = Images;
+			path = StudyJam/Images;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -261,7 +276,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				97646E3B18B35C4400A8DCC4 /* Images.xcassets in Resources */,
+				D8365ECE18F124B900CDD154 /* group.png in Resources */,
 				97646E2D18B35C4400A8DCC4 /* InfoPlist.strings in Resources */,
+				D8365ECF18F124B900CDD154 /* individual.png in Resources */,
 				97646E3618B35C4400A8DCC4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
