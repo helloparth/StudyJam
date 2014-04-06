@@ -193,6 +193,7 @@
                     <connections>
                         <segue destination="ct2-if-47U" kind="relationship" relationship="viewControllers" id="PUG-43-QTo"/>
                         <segue destination="0fW-gi-pbj" kind="relationship" relationship="viewControllers" id="t3Y-lm-cq1"/>
+                        <segue destination="vXZ-lx-hvc" kind="custom" customClass="UIStoryboardPopoverSegue" id="b6F-P0-UNy"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zYg-6v-gvK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -275,10 +276,10 @@
             </objects>
             <point key="canvasLocation" x="478" y="-1016"/>
         </scene>
-        <!--Navigation Controller - Individual-->
+        <!--Friends View Controller - Individual-->
         <scene sceneID="qgu-Zq-dJ2">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ct2-if-47U" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ct2-if-47U" customClass="FriendsViewController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Individual" image="individual.png" id="g46-1f-M6L">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
@@ -296,10 +297,10 @@
             </objects>
             <point key="canvasLocation" x="1758" y="-409"/>
         </scene>
-        <!--Navigation Controller - Group-->
+        <!--Friends View Controller - Group-->
         <scene sceneID="Izq-XU-xlO">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0fW-gi-pbj" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0fW-gi-pbj" customClass="FriendsViewController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Group" image="group.png" id="Ikh-sY-Ufm"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="yNb-SE-oqi">
@@ -317,7 +318,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="group.png" width="48" height="48"/>
+        <image name="group.png" width="32" height="32"/>
         <image name="individual.png" width="32" height="32"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -325,4 +326,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="b6F-P0-UNy"/>
+    </inferredMetricsTieBreakers>
 </document>

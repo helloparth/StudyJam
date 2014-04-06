@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <AddressBookUI/AddressBookUI.h>
 
-@interface FriendsViewController : UIViewController <ABPeoplePickerNavigationControllerDelegate>
+@interface FriendsViewController : UINavigationController <ABPeoplePickerNavigationControllerDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *firstName;
 @property (weak, nonatomic) IBOutlet UILabel *phoneNumber;
 
