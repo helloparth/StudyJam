@@ -23,6 +23,7 @@
 		97646E4418B35C4400A8DCC4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97646E2618B35C4400A8DCC4 /* UIKit.framework */; };
 		97646E4C18B35C4400A8DCC4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 97646E4A18B35C4400A8DCC4 /* InfoPlist.strings */; };
 		97646E4E18B35C4400A8DCC4 /* StudyJamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 97646E4D18B35C4400A8DCC4 /* StudyJamTests.m */; };
+		97CFC1A718FC8DCA00DFFDEB /* APIConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 97CFC1A618FC8DCA00DFFDEB /* APIConnection.m */; };
 		97EA1E2418C2F10E00EACE30 /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97EA1E2318C2F10E00EACE30 /* FriendsViewController.m */; };
 		97EA1E2618C3046C00EACE30 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97EA1E2518C3046C00EACE30 /* MapKit.framework */; };
 		97EA1E2918C3066100EACE30 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97EA1E2818C3066100EACE30 /* MapViewController.m */; };
@@ -67,6 +68,8 @@
 		97646E4918B35C4400A8DCC4 /* StudyJamTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StudyJamTests-Info.plist"; sourceTree = "<group>"; };
 		97646E4B18B35C4400A8DCC4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		97646E4D18B35C4400A8DCC4 /* StudyJamTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudyJamTests.m; sourceTree = "<group>"; };
+		97CFC1A518FC8DCA00DFFDEB /* APIConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIConnection.h; sourceTree = "<group>"; };
+		97CFC1A618FC8DCA00DFFDEB /* APIConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIConnection.m; sourceTree = "<group>"; };
 		97EA1E2218C2F10E00EACE30 /* FriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsViewController.h; sourceTree = "<group>"; };
 		97EA1E2318C2F10E00EACE30 /* FriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsViewController.m; sourceTree = "<group>"; };
 		97EA1E2518C3046C00EACE30 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -149,6 +152,8 @@
 				97646E3118B35C4400A8DCC4 /* AppDelegate.h */,
 				97646E3218B35C4400A8DCC4 /* AppDelegate.m */,
 				97646E3418B35C4400A8DCC4 /* Main.storyboard */,
+				97CFC1A518FC8DCA00DFFDEB /* APIConnection.h */,
+				97CFC1A618FC8DCA00DFFDEB /* APIConnection.m */,
 				D894576C18C704230007C905 /* ZHCustomSegue.h */,
 				D894576D18C704230007C905 /* ZHCustomSegue.m */,
 				97646E3718B35C4400A8DCC4 /* StudyViewController.h */,
@@ -306,6 +311,7 @@
 				97646E3918B35C4400A8DCC4 /* StudyViewController.m in Sources */,
 				972180F618FBE34E00711452 /* StudyState.m in Sources */,
 				97EA1E2418C2F10E00EACE30 /* FriendsViewController.m in Sources */,
+				97CFC1A718FC8DCA00DFFDEB /* APIConnection.m in Sources */,
 				97EA1E2918C3066100EACE30 /* MapViewController.m in Sources */,
 				97646E3318B35C4400A8DCC4 /* AppDelegate.m in Sources */,
 				9707A11018FBCBD000F31506 /* FriendTableViewController.m in Sources */,
