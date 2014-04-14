@@ -1,6 +1,7 @@
 bin
 lib
 include
+.Python
 
 # OS
 .DS_Store
