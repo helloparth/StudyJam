@@ -8,11 +8,18 @@
 
 #import "APIConnection.h"
 
+static NSURL *serverURL = nil;
+
 @implementation APIConnection
+
++ (void)initialize {
+    // TODO: Change to hosted server
+    serverURL = [NSURL URLWithString:@"http://localhost:5000"];
+}
 
 +(NSDictionary*) getUserById:(int) user_id {
     NSURLSession *session = [NSURLSession sharedSession];
-    NSURL *url = [NSURL URLWithString:@"http://localhost:5000/api/user/4045130232"];
+    NSURL *url = [NSURL URLWithString:@"/api/user/4045130232" relativeToURL:serverURL];
     NSURLSessionDataTask *task = [session dataTaskWithURL:url
              completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
                  // TODO: Actual error handling
