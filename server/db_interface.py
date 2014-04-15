@@ -38,8 +38,8 @@ def get_location(user_id):
         }
     elif user_id == 1233549394:
         return { 'locations': {
-                    'latitude': 34.102108,
-                    'longitude': -117.712601,
+                    'latitude': 34.094578,
+                    'longitude': -117.714612,
                     'study_level': 1,
                  }
         }
