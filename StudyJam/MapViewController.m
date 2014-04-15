@@ -6,11 +6,8 @@
 //  Copyright (c) 2014 StudyJam, Inc. All rights reserved.
 //
 
+#import "APIConnection.h"
 #import "MapViewController.h"
-
-
-
-
 
 @implementation MapViewController
 
@@ -27,7 +24,21 @@
 {
     [super viewDidLoad];
     
-    
+    [APIConnection getFriendsById:@"4045130232" responseHandler:^(NSDictionary *response) {
+        // TODO: Get nearby friends only
+        for (id friend in [response objectForKey:@"friends"]) {
+            [APIConnection getLocationById:friend responseHandler:^(NSDictionary *response) {
+                double latitude = [[[response objectForKey:@"locations"] objectForKey:@"latitude"] doubleValue];
+                double longitude = [[[response objectForKey:@"locations"] objectForKey:@"longitude"] doubleValue];
+                CLLocationCoordinate2D location = CLLocationCoordinate2DMake(latitude, longitude);
+                
+                // TODO: Perhaps we have to create a custom annotation class to show study state?
+                MKPointAnnotation *annot = [MKPointAnnotation new];
+                annot.coordinate = location;
+                [self.mapView addAnnotation:annot];
+            }];
+        }
+    }];
     
     _swipeInRightGestureRecognizer = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeInFromRightEdge:)];
     [_swipeInRightGestureRecognizer setEdges:UIRectEdgeRight];
@@ -37,8 +48,6 @@
     
     _mapView.showsUserLocation = YES;
     _mapView.delegate = self;
-    
-
 }
 
 - (IBAction)handleSwipeInFromRightEdge:(id)sender {
