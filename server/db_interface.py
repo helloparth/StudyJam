@@ -1,10 +1,15 @@
+"""Abstracts interaction with the database into a simple set of get and update
+functions."""
+
 def get_friends(user_id):
+    """Returns a dictionary containing a list of a user's friends' user ids."""
     if user_id == 4045130232:
         return { 'friends': [4046427433, 1233549394] }
     return None
 
 
 def get_info(user_id):
+    """Returns a dictionary containing a user's profile information."""
     if user_id == 4045130232:
         return { 'user': {
                     'first_name': 'Parth',
@@ -15,6 +20,8 @@ def get_info(user_id):
 
 
 def get_location(user_id):
+    """Returns a dictionary containing a user's latitude, longitude, and study
+    level."""
     if user_id == 4045130232:
         return { 'locations': {
                     'latitude': 34.1000167,
