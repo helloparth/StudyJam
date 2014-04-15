@@ -17,6 +17,11 @@ static NSURL *serverURL = nil;
     serverURL = [NSURL URLWithString:@"http://localhost:5000"];
 }
 
+/*
+ * Sends the actual request to the server. The `url` will be appended the
+ * server name, and the responseHandler will be called when the request
+ * completes.
+ */
 + (void)sendGetRequestToURL:(NSString*) url onCompletion:(ResponseHandlerType) responseHandler {
     NSURLSession *session = [NSURLSession sharedSession];
     NSURL *absoluteURL = [NSURL URLWithString:url relativeToURL:serverURL];
