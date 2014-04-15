@@ -12,6 +12,8 @@ typedef void (^ResponseHandlerType)(NSDictionary *response);
 
 @interface APIConnection : NSObject
 
-+ (void) getUserById: (NSString*)user_id completionHandler: (ResponseHandlerType)responseHandler;
++ (void)getUserById: (NSString*)user_id responseHandler: (ResponseHandlerType)responseHandler;
++ (void)getLocationById: (NSString*)user_id responseHandler: (ResponseHandlerType)responseHandler;
++ (void)getFriendsById: (NSString*)user_id responseHandler: (ResponseHandlerType)responseHandler;
 
 @end

@@ -37,9 +37,19 @@ static NSURL *serverURL = nil;
     
 }
 
-+ (void)getUserById:(NSString*) user_id completionHandler:(ResponseHandlerType) responseHandler {
++ (void)getUserById:(NSString*) user_id responseHandler:(ResponseHandlerType) responseHandler {
     NSString *url = [NSString stringWithFormat:@"/api/user/%@", user_id];
     [self sendGetRequestToURL:url onCompletion: responseHandler];
+}
+
++ (void)getLocationById:(NSString *)user_id responseHandler:(ResponseHandlerType)responseHandler {
+    NSString *url = [NSString stringWithFormat:@"/api/user/%@/location", user_id];
+    [self sendGetRequestToURL:url onCompletion:responseHandler];
+}
+
++ (void)getFriendsById:(NSString *)user_id responseHandler:(ResponseHandlerType)responseHandler {
+    NSString *url = [NSString stringWithFormat:@"/api/user/%@/friends", user_id];
+    [self sendGetRequestToURL:url onCompletion:responseHandler];
 }
 
 @end
