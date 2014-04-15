@@ -17,22 +17,29 @@ static NSURL *serverURL = nil;
     serverURL = [NSURL URLWithString:@"http://localhost:5000"];
 }
 
-+(NSDictionary*) getUserById:(int) user_id {
++ (void)sendGetRequestToURL:(NSString*) url onCompletion:(ResponseHandlerType) responseHandler {
     NSURLSession *session = [NSURLSession sharedSession];
-    NSURL *url = [NSURL URLWithString:@"/api/user/4045130232" relativeToURL:serverURL];
-    NSURLSessionDataTask *task = [session dataTaskWithURL:url
-             completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-                 // TODO: Actual error handling
-                 if (error) {
-                     NSLog(@"%@", error.description);
-                     return;
-                 }
-                 
-                 NSString *string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-                 NSLog(@"%@", string);
-             }];
+    NSURL *absoluteURL = [NSURL URLWithString:url relativeToURL:serverURL];
+    NSURLSessionDataTask *task = [session dataTaskWithURL:absoluteURL
+                                          completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+                                              NSDictionary *responseDict = nil;
+                                              
+                                              // TODO: Implement actual error handling
+                                              if (error) {
+                                                  NSLog(@"%@", error.description);
+                                              } else {
+                                                  responseDict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+                                              }
+                                              
+                                              responseHandler(responseDict);
+    }];
     [task resume];
-    return [NSDictionary new];
+    
+}
+
++ (void)getUserById:(NSString*) user_id completionHandler:(ResponseHandlerType) responseHandler {
+    NSString *url = [NSString stringWithFormat:@"/api/user/%@", user_id];
+    [self sendGetRequestToURL:url onCompletion: responseHandler];
 }
 
 @end

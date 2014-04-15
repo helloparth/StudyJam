@@ -8,8 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+typedef void (^ResponseHandlerType)(NSDictionary *response);
+
 @interface APIConnection : NSObject
 
-+ (NSDictionary*) getUserById: (int)user_id;
++ (void) getUserById: (NSString*)user_id completionHandler: (ResponseHandlerType)responseHandler;
 
 @end
