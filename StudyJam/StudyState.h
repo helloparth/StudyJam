@@ -18,6 +18,11 @@
 @property int studyLevel;
 
 /**
+ * Construct a StudyLevel object with an initial level.
+ */
+-(id) initWithLevel:(int)level;
+
+/**
  * Increase the study level by 1.
  */
 -(void) increaseFocus;
