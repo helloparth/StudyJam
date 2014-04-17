@@ -8,6 +8,8 @@
 
 #import "APIConnection.h"
 #import "MapViewController.h"
+#import "StudyAnnotation.h"
+#import "StudyState.h"
 
 @implementation MapViewController
 
@@ -28,12 +30,15 @@
         // TODO: Get nearby friends only
         for (id friend in [response objectForKey:@"friends"]) {
             [APIConnection getLocationById:friend responseHandler:^(NSDictionary *response) {
-                double latitude = [[[response objectForKey:@"locations"] objectForKey:@"latitude"] doubleValue];
-                double longitude = [[[response objectForKey:@"locations"] objectForKey:@"longitude"] doubleValue];
+                NSDictionary *locations = [response objectForKey:@"locations"];
+                double latitude = [[locations objectForKey:@"latitude"] doubleValue];
+                double longitude = [[locations objectForKey:@"longitude"] doubleValue];
+                int studyLevelValue = [[locations objectForKey:@"study_level"] intValue];
+                StudyState *studyState = [[StudyState alloc] initWithLevel:studyLevelValue];
+                
                 CLLocationCoordinate2D location = CLLocationCoordinate2DMake(latitude, longitude);
                 
-                // TODO: Perhaps we have to create a custom annotation class to show study state?
-                MKPointAnnotation *annot = [MKPointAnnotation new];
+                StudyAnnotation *annot = [[StudyAnnotation alloc] initWithTitle:@"Parth Patel" andLocation:location andColor:[studyState getStudyLevelColor]];
                 annot.coordinate = location;
                 [self.mapView addAnnotation:annot];
             }];
@@ -89,5 +94,22 @@
     mapRegion.span.longitudeDelta = 0.01;
     
     [mapView setRegion:mapRegion animated: YES];
+}
+
+-(MKAnnotationView*)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
+    if([annotation isKindOfClass:[StudyAnnotation class]]) {
+        StudyAnnotation *studyAnnotation = (StudyAnnotation*)annotation;
+        MKAnnotationView *annotationView = [mapView dequeueReusableAnnotationViewWithIdentifier:@"StudyAnnotation"];
+        
+        if (annotationView == nil) {
+            annotationView = studyAnnotation.annotationView;
+        } else {
+            annotationView.annotation = annotation;
+        }
+        
+        return annotationView;
+    } else {
+        return nil;
+    }
 }
 @end

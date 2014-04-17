@@ -23,6 +23,7 @@
 		97646E4418B35C4400A8DCC4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97646E2618B35C4400A8DCC4 /* UIKit.framework */; };
 		97646E4C18B35C4400A8DCC4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 97646E4A18B35C4400A8DCC4 /* InfoPlist.strings */; };
 		97646E4E18B35C4400A8DCC4 /* StudyJamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 97646E4D18B35C4400A8DCC4 /* StudyJamTests.m */; };
+		9785EDCD18FF884400C2ECDF /* StudyAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9785EDCC18FF884400C2ECDF /* StudyAnnotation.m */; };
 		97CFC1A718FC8DCA00DFFDEB /* APIConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 97CFC1A618FC8DCA00DFFDEB /* APIConnection.m */; };
 		97EA1E2418C2F10E00EACE30 /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97EA1E2318C2F10E00EACE30 /* FriendsViewController.m */; };
 		97EA1E2618C3046C00EACE30 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97EA1E2518C3046C00EACE30 /* MapKit.framework */; };
@@ -69,6 +70,8 @@
 		97646E4918B35C4400A8DCC4 /* StudyJamTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StudyJamTests-Info.plist"; sourceTree = "<group>"; };
 		97646E4B18B35C4400A8DCC4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		97646E4D18B35C4400A8DCC4 /* StudyJamTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudyJamTests.m; sourceTree = "<group>"; };
+		9785EDCB18FF884400C2ECDF /* StudyAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudyAnnotation.h; sourceTree = "<group>"; };
+		9785EDCC18FF884400C2ECDF /* StudyAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudyAnnotation.m; sourceTree = "<group>"; };
 		97CFC1A518FC8DCA00DFFDEB /* APIConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIConnection.h; sourceTree = "<group>"; };
 		97CFC1A618FC8DCA00DFFDEB /* APIConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIConnection.m; sourceTree = "<group>"; };
 		97EA1E2218C2F10E00EACE30 /* FriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsViewController.h; sourceTree = "<group>"; };
@@ -155,6 +158,8 @@
 				97646E3118B35C4400A8DCC4 /* AppDelegate.h */,
 				97646E3218B35C4400A8DCC4 /* AppDelegate.m */,
 				97646E3418B35C4400A8DCC4 /* Main.storyboard */,
+				9785EDCB18FF884400C2ECDF /* StudyAnnotation.h */,
+				9785EDCC18FF884400C2ECDF /* StudyAnnotation.m */,
 				97CFC1A518FC8DCA00DFFDEB /* APIConnection.h */,
 				97CFC1A618FC8DCA00DFFDEB /* APIConnection.m */,
 				D894576C18C704230007C905 /* ZHCustomSegue.h */,
@@ -316,6 +321,7 @@
 				97646E3918B35C4400A8DCC4 /* StudyViewController.m in Sources */,
 				D89CFC6D18FF35AA00A3911C /* DetailsViewController.m in Sources */,
 				972180F618FBE34E00711452 /* StudyState.m in Sources */,
+				9785EDCD18FF884400C2ECDF /* StudyAnnotation.m in Sources */,
 				97EA1E2418C2F10E00EACE30 /* FriendsViewController.m in Sources */,
 				97CFC1A718FC8DCA00DFFDEB /* APIConnection.m in Sources */,
 				97EA1E2918C3066100EACE30 /* MapViewController.m in Sources */,
