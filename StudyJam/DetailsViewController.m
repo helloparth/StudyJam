@@ -110,10 +110,26 @@
 
 
 -(void)makeCallToNumber:(NSString *)numberToCall{
-    NSURL *phoneURL = [NSURL URLWithString:[NSString stringWithFormat:@"tel:%@", numberToCall]];
-    if ([[UIApplication sharedApplication] canOpenURL:phoneURL]) {
-        [[UIApplication sharedApplication] openURL:phoneURL];
+    NSString *telephoneString=[numberToCall stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    
+    NSMutableString *str1=[[NSMutableString alloc] initWithString:telephoneString];
+    
+    [str1 setString:[str1 stringByReplacingOccurrencesOfString:@"(" withString:@""]];
+    
+    [str1 setString:[str1 stringByReplacingOccurrencesOfString:@")" withString:@""]];
+    
+    [str1 setString:[str1 stringByReplacingOccurrencesOfString:@"-" withString:@""]];
+    
+    [str1 setString:[str1 stringByReplacingOccurrencesOfString:@" " withString:@""]];
+    
+    telephoneString = [@"tel://" stringByAppendingString:str1];
+    
+    if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:telephoneString]]) {
+        
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:telephoneString]];
+        
     }
+    
 }
 
 
