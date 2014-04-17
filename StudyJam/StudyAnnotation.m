@@ -31,10 +31,10 @@
     path.lineCapStyle = kCGLineCapRound;
     
     UIGraphicsBeginImageContextWithOptions(rect.size, NO, 0);
-    [[UIColor whiteColor] setStroke];
+    //[[UIColor whiteColor] setStroke];
     [color setFill];
     [path fill];
-    [path stroke];
+    //[path stroke];
     UIImage *result = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
@@ -47,9 +47,10 @@
     annotationView.canShowCallout = YES;
     annotationView.image = [StudyAnnotation createImageForColor:_color];
     annotationView.layer.masksToBounds = NO;
-    annotationView.layer.shadowColor = [[UIColor grayColor] CGColor];
-    annotationView.layer.shadowRadius = 5;
-    annotationView.layer.shadowOpacity = 0.3;
+    annotationView.layer.shadowColor = [[UIColor blackColor] CGColor];
+    annotationView.layer.shadowOffset = CGSizeMake(1, 1);
+    annotationView.layer.shadowRadius = 7;
+    annotationView.layer.shadowOpacity = 0.5;
     
     return annotationView;
 }
