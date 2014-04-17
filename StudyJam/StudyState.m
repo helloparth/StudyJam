@@ -13,6 +13,14 @@
 static const int MAX_STUDY_LEVEL = 3;
 static const int MIN_STUDY_LEVEL = 0;
 
+-(id)initWithLevel:(int)level {
+    self = [super init];
+    if (self) {
+        self.studyLevel = level;
+    }
+    return self;
+}
+
 -(void)increaseFocus {
     if (self.studyLevel < MAX_STUDY_LEVEL)
     self.studyLevel += 1;
