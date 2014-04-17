@@ -25,9 +25,16 @@
     
     CGRect rect = CGRectMake(0, 0, 20, 20);
     
+    UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:rect];
+    path.lineWidth = 3;
+    path.lineJoinStyle = kCGLineJoinRound;
+    path.lineCapStyle = kCGLineCapRound;
+    
     UIGraphicsBeginImageContextWithOptions(rect.size, NO, 0);
+    [[UIColor whiteColor] setStroke];
     [color setFill];
-    UIRectFill(rect);
+    [path fill];
+    [path stroke];
     UIImage *result = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
@@ -39,6 +46,11 @@
     annotationView.enabled = YES;
     annotationView.canShowCallout = YES;
     annotationView.image = [StudyAnnotation createImageForColor:_color];
+    annotationView.layer.masksToBounds = NO;
+    annotationView.layer.shadowColor = [[UIColor grayColor] CGColor];
+    annotationView.layer.shadowRadius = 5;
+    annotationView.layer.shadowOpacity = 0.3;
+    
     return annotationView;
 }
 
