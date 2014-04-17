@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AddressBook/AddressBook.h>
+#import <AddressBookUI/AddressBookUI.h>
 
-@interface FriendTableViewController : UITableViewController<UITableViewDelegate, UITableViewDataSource>
+@interface FriendTableViewController : UITableViewController<UITableViewDelegate, UITableViewDataSource, ABPeoplePickerNavigationControllerDelegate>
+
+@property (nonatomic, strong) NSMutableArray *arrContactsData;
 
 @end

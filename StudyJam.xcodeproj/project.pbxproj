@@ -30,6 +30,7 @@
 		D8365ECE18F124B900CDD154 /* group.png in Resources */ = {isa = PBXBuildFile; fileRef = D8365ECC18F124B900CDD154 /* group.png */; };
 		D8365ECF18F124B900CDD154 /* individual.png in Resources */ = {isa = PBXBuildFile; fileRef = D8365ECD18F124B900CDD154 /* individual.png */; };
 		D894576E18C704230007C905 /* ZHCustomSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D894576D18C704230007C905 /* ZHCustomSegue.m */; };
+		D89CFC6D18FF35AA00A3911C /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D89CFC6C18FF35AA00A3911C /* DetailsViewController.m */; };
 		D8FCBB6718DFA56C00B6C398 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8FCBB6618DFA56C00B6C398 /* AddressBookUI.framework */; };
 		D8FCBB6918DFA57900B6C398 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8FCBB6818DFA57900B6C398 /* AddressBook.framework */; };
 /* End PBXBuildFile section */
@@ -79,6 +80,8 @@
 		D8365ECD18F124B900CDD154 /* individual.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = individual.png; sourceTree = "<group>"; };
 		D894576C18C704230007C905 /* ZHCustomSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHCustomSegue.h; sourceTree = "<group>"; };
 		D894576D18C704230007C905 /* ZHCustomSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHCustomSegue.m; sourceTree = "<group>"; };
+		D89CFC6B18FF35AA00A3911C /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
+		D89CFC6C18FF35AA00A3911C /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
 		D8FCBB6618DFA56C00B6C398 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		D8FCBB6818DFA57900B6C398 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -161,9 +164,11 @@
 				97EA1E2718C3066100EACE30 /* MapViewController.h */,
 				97EA1E2818C3066100EACE30 /* MapViewController.m */,
 				97EA1E2218C2F10E00EACE30 /* FriendsViewController.h */,
+				97EA1E2318C2F10E00EACE30 /* FriendsViewController.m */,
+				D89CFC6B18FF35AA00A3911C /* DetailsViewController.h */,
+				D89CFC6C18FF35AA00A3911C /* DetailsViewController.m */,
 				9707A10E18FBCBD000F31506 /* FriendTableViewController.h */,
 				9707A10F18FBCBD000F31506 /* FriendTableViewController.m */,
-				97EA1E2318C2F10E00EACE30 /* FriendsViewController.m */,
 				97646E3A18B35C4400A8DCC4 /* Images.xcassets */,
 				97646E2918B35C4400A8DCC4 /* Supporting Files */,
 			);
@@ -309,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				97646E3918B35C4400A8DCC4 /* StudyViewController.m in Sources */,
+				D89CFC6D18FF35AA00A3911C /* DetailsViewController.m in Sources */,
 				972180F618FBE34E00711452 /* StudyState.m in Sources */,
 				97EA1E2418C2F10E00EACE30 /* FriendsViewController.m in Sources */,
 				97CFC1A718FC8DCA00DFFDEB /* APIConnection.m in Sources */,
