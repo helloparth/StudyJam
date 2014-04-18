@@ -21,12 +21,12 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="pageIndicatorTintColor" cocoaTouchSystemColor="lightTextColor"/>
                             </pageControl>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0eg-x4-bVa">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="408"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0eg-x4-bVa">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="440"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </mapView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ClW-Wj-Wjv">
-                                <rect key="frame" x="0.0" y="408" width="320" height="44"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ClW-Wj-Wjv">
+                                <rect key="frame" x="0.0" y="440" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="My Location" width="137" id="dda-Xm-gBg">
@@ -48,6 +48,7 @@
                             <constraint firstItem="ClW-Wj-Wjv" firstAttribute="leading" secondItem="0eg-x4-bVa" secondAttribute="leading" id="55H-XF-ZRq"/>
                             <constraint firstItem="ClW-Wj-Wjv" firstAttribute="trailing" secondItem="0eg-x4-bVa" secondAttribute="trailing" id="55l-Ug-dUY"/>
                             <constraint firstItem="zLA-ze-7WW" firstAttribute="top" secondItem="ClW-Wj-Wjv" secondAttribute="bottom" constant="28" id="7cF-Tq-gmN"/>
+                            <constraint firstAttribute="bottom" secondItem="ClW-Wj-Wjv" secondAttribute="bottom" constant="20" symbolic="YES" id="I7u-Yk-NAK"/>
                             <constraint firstItem="ClW-Wj-Wjv" firstAttribute="top" secondItem="0eg-x4-bVa" secondAttribute="bottom" id="Iim-cd-aC5"/>
                             <constraint firstAttribute="trailing" secondItem="ClW-Wj-Wjv" secondAttribute="trailing" id="Nyh-nR-M0M"/>
                             <constraint firstItem="0eg-x4-bVa" firstAttribute="top" secondItem="WPf-d3-Zyk" secondAttribute="top" id="X5F-Kb-vkB"/>
@@ -352,7 +353,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Practice" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nZ1-Uk-dei">
-                                            <rect key="frame" x="25" y="11" width="63" height="21"/>
+                                            <rect key="frame" x="20" y="11" width="63" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="highlightedColor"/>

@@ -72,6 +72,8 @@
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
+    // THIS IS WHERE THE CONTACT PICTURE IS BEING ADDED
+    cell.imageView.image = [UIImage imageNamed:@"andy.jpg"];
     NSDictionary *contactInfoDict = [_arrContactsData objectAtIndex:indexPath.row];
     cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", [contactInfoDict objectForKey:@"firstName"], [contactInfoDict objectForKey:@"lastName"]];
     
