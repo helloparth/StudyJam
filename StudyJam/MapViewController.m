@@ -38,7 +38,7 @@
                 
                 CLLocationCoordinate2D location = CLLocationCoordinate2DMake(latitude, longitude);
                 
-                StudyAnnotation *annot = [[StudyAnnotation alloc] initWithTitle:@"Parth Patel" andLocation:location andColor:[studyState getStudyLevelColor]];
+                StudyAnnotation *annot = [[StudyAnnotation alloc] initWithTitle:@"Parth Patel" andLocation:location andColor: [UIColor whiteColor]];//[studyState getStudyLevelColor]];
                 annot.coordinate = location;
                 [self.mapView addAnnotation:annot];
             }];
@@ -57,7 +57,8 @@
 
 - (IBAction)handleSwipeInFromRightEdge:(id)sender {
     [self.navigationController popToRootViewControllerAnimated:YES];
-    [UIView transitionWithView:self.navigationController.view duration:1.0    options:UIViewContentModeRedraw animations:^{ [self.navigationController popToRootViewControllerAnimated:NO];}completion:NULL];
+    [UIView transitionWithView:self.navigationController.view duration:1.0    options:UIViewAnimationTransitionCurlDown
+                    animations:^{ [self.navigationController popToRootViewControllerAnimated:NO];}completion:NULL];
 
 }
 

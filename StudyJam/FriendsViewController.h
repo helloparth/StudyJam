@@ -11,8 +11,7 @@
 #import "ZHCustomSegue.h"
 
 @interface FriendsViewController : UINavigationController <ABPeoplePickerNavigationControllerDelegate>
-@property (weak, nonatomic) IBOutlet UILabel *firstName;
-@property (weak, nonatomic) IBOutlet UILabel *phoneNumber;
+
 
 - (IBAction)addFriend:(id)sender;
 

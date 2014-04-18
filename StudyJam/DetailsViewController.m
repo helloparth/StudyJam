@@ -27,7 +27,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    
+
     [_tblContactDetails setDelegate:self];
     [_tblContactDetails setDataSource:self];
     
@@ -42,7 +42,6 @@
 
 
 #pragma mark - Private method implementation
-
 -(void)populateContactData{
     NSString *contactFullName = [NSString stringWithFormat:@"%@ %@", [_dictContactDetails objectForKey:@"firstName"], [_dictContactDetails objectForKey:@"lastName"]];
     

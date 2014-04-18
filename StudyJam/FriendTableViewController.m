@@ -173,7 +173,8 @@
     }
     
     // Initialize the array if it's not yet initialized.
-    if (_arrContactsData == nil) {
+    if (self.arrContactsData == nil) {
+        NSLog(@"hello there!");
         _arrContactsData = [[NSMutableArray alloc] init];
     }
     // Add the dictionary to the array.
