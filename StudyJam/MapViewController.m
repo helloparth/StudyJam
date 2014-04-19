@@ -57,8 +57,13 @@
 
 - (IBAction)handleSwipeInFromRightEdge:(id)sender {
     [self.navigationController popToRootViewControllerAnimated:YES];
-    [UIView transitionWithView:self.navigationController.view duration:1.0    options:UIViewAnimationTransitionCurlDown
-                    animations:^{ [self.navigationController popToRootViewControllerAnimated:NO];}completion:NULL];
+    [UIView transitionWithView:self.navigationController.view
+                      duration: 1.0
+                       options: UIViewAnimationOptionTransitionCurlDown
+                    animations: ^{
+                        [self.navigationController popToRootViewControllerAnimated:NO];
+                    }
+                    completion:NULL];
 
 }
 
