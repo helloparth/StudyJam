@@ -16,18 +16,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="g3d-a7-Icc">
-                                <rect key="frame" x="141" y="443" width="39" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="pageIndicatorTintColor" cocoaTouchSystemColor="lightTextColor"/>
-                            </pageControl>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0eg-x4-bVa">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="440"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0eg-x4-bVa">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="436"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </mapView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ClW-Wj-Wjv">
-                                <rect key="frame" x="0.0" y="440" width="320" height="44"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ClW-Wj-Wjv">
+                                <rect key="frame" x="0.0" y="436" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="VeQ-Kk-3eH"/>
+                                    <constraint firstAttribute="height" constant="44" id="rYR-X4-Q8u"/>
+                                </constraints>
                                 <items>
                                     <barButtonItem title="My Location" width="137" id="dda-Xm-gBg">
                                         <connections>
@@ -44,16 +43,14 @@
                         </subviews>
                         <color key="backgroundColor" red="0.80000001192092896" green="0.40000000596046448" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="g3d-a7-Icc" firstAttribute="centerX" secondItem="ClW-Wj-Wjv" secondAttribute="centerX" id="1rT-34-ZU3"/>
-                            <constraint firstItem="ClW-Wj-Wjv" firstAttribute="leading" secondItem="0eg-x4-bVa" secondAttribute="leading" id="55H-XF-ZRq"/>
-                            <constraint firstItem="ClW-Wj-Wjv" firstAttribute="trailing" secondItem="0eg-x4-bVa" secondAttribute="trailing" id="55l-Ug-dUY"/>
-                            <constraint firstItem="zLA-ze-7WW" firstAttribute="top" secondItem="ClW-Wj-Wjv" secondAttribute="bottom" constant="28" id="7cF-Tq-gmN"/>
-                            <constraint firstAttribute="bottom" secondItem="ClW-Wj-Wjv" secondAttribute="bottom" constant="20" symbolic="YES" id="I7u-Yk-NAK"/>
-                            <constraint firstItem="ClW-Wj-Wjv" firstAttribute="top" secondItem="0eg-x4-bVa" secondAttribute="bottom" id="Iim-cd-aC5"/>
-                            <constraint firstAttribute="trailing" secondItem="ClW-Wj-Wjv" secondAttribute="trailing" id="Nyh-nR-M0M"/>
-                            <constraint firstItem="0eg-x4-bVa" firstAttribute="top" secondItem="WPf-d3-Zyk" secondAttribute="top" id="X5F-Kb-vkB"/>
-                            <constraint firstAttribute="bottom" secondItem="g3d-a7-Icc" secondAttribute="bottom" id="a6x-ob-zPe"/>
-                            <constraint firstItem="ClW-Wj-Wjv" firstAttribute="leading" secondItem="WPf-d3-Zyk" secondAttribute="leading" id="tET-rQ-fgc"/>
+                            <constraint firstItem="ClW-Wj-Wjv" firstAttribute="leading" secondItem="0eg-x4-bVa" secondAttribute="leading" id="33w-Oe-gkI"/>
+                            <constraint firstItem="ClW-Wj-Wjv" firstAttribute="leading" secondItem="WPf-d3-Zyk" secondAttribute="leading" id="CPj-Zj-kyk"/>
+                            <constraint firstAttribute="trailing" secondItem="ClW-Wj-Wjv" secondAttribute="trailing" id="CWU-4k-bJz"/>
+                            <constraint firstItem="ClW-Wj-Wjv" firstAttribute="trailing" secondItem="0eg-x4-bVa" secondAttribute="trailing" id="VyU-AI-oc2"/>
+                            <constraint firstItem="0eg-x4-bVa" firstAttribute="top" secondItem="WPf-d3-Zyk" secondAttribute="top" id="cBC-tB-onM"/>
+                            <constraint firstItem="ClW-Wj-Wjv" firstAttribute="top" secondItem="0eg-x4-bVa" secondAttribute="bottom" id="h4t-TG-6to"/>
+                            <constraint firstItem="zLA-ze-7WW" firstAttribute="top" secondItem="ClW-Wj-Wjv" secondAttribute="bottom" constant="20" symbolic="YES" id="hh6-PA-DiQ"/>
+                            <constraint firstItem="ClW-Wj-Wjv" firstAttribute="top" secondItem="0eg-x4-bVa" secondAttribute="bottom" id="iH7-N8-6e9"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ktk-th-yxs"/>
