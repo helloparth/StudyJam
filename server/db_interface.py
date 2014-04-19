@@ -44,3 +44,7 @@ def get_location(user_id):
                  }
         }
     return None
+
+
+def update_location(user_id, latitude, longitude):
+    pass
