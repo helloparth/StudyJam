@@ -55,5 +55,19 @@ static const int MIN_STUDY_LEVEL = 0;
     }
 }
 
+-(NSString*)getStudyLevelText {
+    switch(self.studyLevel) {
+        case 0:
+            return @"Just Chillin'";
+        case 1:
+            return @"Slow Jammin'";
+        case 2:
+            return @"Straight Crammin'";
+        case 3:
+            return @"Finals Examin'";
+        default:
+            return @"";
+    }
+}
 
 @end

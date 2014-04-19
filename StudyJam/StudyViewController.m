@@ -17,6 +17,7 @@ static const NSTimeInterval FOCUS_ANIMATION_DURATION = 1.00;
 @property UIScreenEdgePanGestureRecognizer *swipeInLeftGestureRecognizer;
 @property UIScreenEdgePanGestureRecognizer *swipeInRightGestureRecognizer;
 @property (weak, nonatomic) IBOutlet UIImageView *jarImageView;
+@property CATransition *labelAnimation;
 @end
 
 @implementation StudyViewController
@@ -24,8 +25,9 @@ static const NSTimeInterval FOCUS_ANIMATION_DURATION = 1.00;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
 	self.studyState = [StudyState new];
-    [self.studyLabel setText:[NSString stringWithFormat:@"StudyLevel %d", self.studyState.studyLevel]];
+    [self.studyLabel setText:[self.studyState getStudyLevelText]];
     
     self.swipeInLeftGestureRecognizer = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeInFromLeftEdge:)];
     [self.swipeInLeftGestureRecognizer setEdges:UIRectEdgeLeft];
@@ -34,6 +36,12 @@ static const NSTimeInterval FOCUS_ANIMATION_DURATION = 1.00;
     self.swipeInRightGestureRecognizer = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeInFromRightEdge:)];
     [self.swipeInRightGestureRecognizer setEdges:UIRectEdgeRight];
     [self.view addGestureRecognizer:self.swipeInRightGestureRecognizer];
+    
+    // Add animation to label
+    self.labelAnimation = [CATransition animation];
+    self.labelAnimation.duration = 1.0;
+    self.labelAnimation.type = kCATransitionFade;
+    self.labelAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
 }
 
 - (void)didReceiveMemoryWarning
@@ -89,7 +97,10 @@ static const NSTimeInterval FOCUS_ANIMATION_DURATION = 1.00;
 
 - (IBAction)detectUpSwipe:(id)sender {
     [self.studyState increaseFocus];
-    [self.studyLabel setText:[NSString stringWithFormat:@"StudyLevel %d", self.studyState.studyLevel]];
+    [self.studyLabel.layer addAnimation:self.labelAnimation forKey:@"changeTextTransition"];
+    
+
+    [self.studyLabel setText:[self.studyState getStudyLevelText]];
     
     [UIView animateWithDuration: FOCUS_ANIMATION_DURATION animations: ^{
         self.jarImageView.image = [self changeColorForImage:self.jarImageView.image toColor:[self.studyState getStudyLevelColor]];
@@ -99,7 +110,8 @@ static const NSTimeInterval FOCUS_ANIMATION_DURATION = 1.00;
 
 - (IBAction)detectDownSwipe:(id)sender {
     [self.studyState decreaseFocus];
-    [self.studyLabel setText:[NSString stringWithFormat:@"StudyLevel %d", self.studyState.studyLevel]];
+    [self.studyLabel.layer addAnimation:self.labelAnimation forKey:@"changeTextTransition"];
+    [self.studyLabel setText:[self.studyState getStudyLevelText]];
     
     [UIView animateWithDuration: FOCUS_ANIMATION_DURATION animations: ^{
         self.jarImageView.image = [self changeColorForImage:self.jarImageView.image toColor:[self.studyState getStudyLevelColor]];

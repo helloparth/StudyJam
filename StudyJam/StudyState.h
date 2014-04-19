@@ -39,4 +39,9 @@
  */
 -(UIColor*) getStudyLevelColor;
 
+/**
+ * Returns a string which represents the study level in text
+ */
+-(NSString*) getStudyLevelText;
+
 @end
