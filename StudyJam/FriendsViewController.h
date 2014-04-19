@@ -12,10 +12,6 @@
 
 @interface FriendsViewController : UINavigationController <ABPeoplePickerNavigationControllerDelegate>
 
-
-- (IBAction)addFriend:(id)sender;
-
-
 @property (nonatomic, strong) NSArray *myContacts;
 
 @end
