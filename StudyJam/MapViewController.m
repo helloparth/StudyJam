@@ -38,7 +38,7 @@
                 
                 CLLocationCoordinate2D location = CLLocationCoordinate2DMake(latitude, longitude);
                 
-                StudyAnnotation *annot = [[StudyAnnotation alloc] initWithTitle:@"Parth Patel" andLocation:location andColor: [UIColor whiteColor]];//[studyState getStudyLevelColor]];
+                StudyAnnotation *annot = [[StudyAnnotation alloc] initWithTitle:@"Parth Patel" andLocation:location andColor: [studyState getStudyLevelColor]];
                 annot.coordinate = location;
                 [self.mapView addAnnotation:annot];
             }];
