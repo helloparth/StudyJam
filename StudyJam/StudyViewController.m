@@ -16,6 +16,7 @@ static const NSTimeInterval FOCUS_ANIMATION_DURATION = 1.00;
 @property IBOutlet UILabel *studyLabel;
 @property UIScreenEdgePanGestureRecognizer *swipeInLeftGestureRecognizer;
 @property UIScreenEdgePanGestureRecognizer *swipeInRightGestureRecognizer;
+@property (weak, nonatomic) IBOutlet UIImageView *jarImageView;
 @end
 
 @implementation StudyViewController
@@ -23,16 +24,16 @@ static const NSTimeInterval FOCUS_ANIMATION_DURATION = 1.00;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	_studyState = [StudyState new];
+	self.studyState = [StudyState new];
+    [self.studyLabel setText:[NSString stringWithFormat:@"StudyLevel %d", self.studyState.studyLevel]];
     
-    // FIXME: Figure out how to limit calls to the delegate
-    _swipeInLeftGestureRecognizer = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeInFromLeftEdge:)];
-    [_swipeInLeftGestureRecognizer setEdges:UIRectEdgeLeft];
+    self.swipeInLeftGestureRecognizer = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeInFromLeftEdge:)];
+    [self.swipeInLeftGestureRecognizer setEdges:UIRectEdgeLeft];
     [self.view addGestureRecognizer:_swipeInLeftGestureRecognizer];
     
-    _swipeInRightGestureRecognizer = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeInFromRightEdge:)];
-    [_swipeInRightGestureRecognizer setEdges:UIRectEdgeRight];
-    [self.view addGestureRecognizer:_swipeInRightGestureRecognizer];
+    self.swipeInRightGestureRecognizer = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeInFromRightEdge:)];
+    [self.swipeInRightGestureRecognizer setEdges:UIRectEdgeRight];
+    [self.view addGestureRecognizer:self.swipeInRightGestureRecognizer];
 }
 
 - (void)didReceiveMemoryWarning
@@ -54,36 +55,55 @@ static const NSTimeInterval FOCUS_ANIMATION_DURATION = 1.00;
 }
 
 
+- (UIImage *) changeColorForImage:(UIImage *)image toColor:(UIColor*)color {
+    UIGraphicsBeginImageContext(image.size);
+    
+    CGRect contextRect;
+    contextRect.origin.x = 0.0f;
+    contextRect.origin.y = 0.0f;
+    contextRect.size = [image size];
+
+    CGSize itemImageSize = [image size];
+    CGPoint itemImagePosition;
+    itemImagePosition.x = ceilf((contextRect.size.width - itemImageSize.width) / 2);
+    itemImagePosition.y = ceilf((contextRect.size.height - itemImageSize.height) );
+    
+    UIGraphicsBeginImageContext(contextRect.size);
+    
+    CGContextRef c = UIGraphicsGetCurrentContext();
+    CGContextBeginTransparencyLayer(c, NULL);
+    CGContextScaleCTM(c, 1.0, -1.0);
+    CGContextClipToMask(c, CGRectMake(itemImagePosition.x, -itemImagePosition.y, itemImageSize.width, -itemImageSize.height), [image CGImage]);
+    const float* colors = CGColorGetComponents( color.CGColor );
+    CGContextSetRGBFillColor(c, colors[0], colors[1], colors[2], 1);
+    
+    contextRect.size.height = -contextRect.size.height;
+    contextRect.size.height -= 15;
+    CGContextFillRect(c, contextRect);
+    CGContextEndTransparencyLayer(c);
+    
+    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return img;
+}
+
 - (IBAction)detectUpSwipe:(id)sender {
-    [_studyState increaseFocus];
-    [_studyLabel setText:[NSString stringWithFormat:@"StudyLevel %d", _studyState.studyLevel]];
+    [self.studyState increaseFocus];
+    [self.studyLabel setText:[NSString stringWithFormat:@"StudyLevel %d", self.studyState.studyLevel]];
     
     [UIView animateWithDuration: FOCUS_ANIMATION_DURATION animations: ^{
-        self.view.backgroundColor = [_studyState getStudyLevelColor];
+        self.jarImageView.image = [self changeColorForImage:self.jarImageView.image toColor:[self.studyState getStudyLevelColor]];
     }];
+
 }
 
 - (IBAction)detectDownSwipe:(id)sender {
-    [_studyState decreaseFocus];
-    [_studyLabel setText:[NSString stringWithFormat:@"StudyLevel %d", _studyState.studyLevel]];
+    [self.studyState decreaseFocus];
+    [self.studyLabel setText:[NSString stringWithFormat:@"StudyLevel %d", self.studyState.studyLevel]];
     
     [UIView animateWithDuration: FOCUS_ANIMATION_DURATION animations: ^{
-        self.view.backgroundColor = [_studyState getStudyLevelColor];
+        self.jarImageView.image = [self changeColorForImage:self.jarImageView.image toColor:[self.studyState getStudyLevelColor]];
     }];
 }
-
-- (IBAction)detectTap:(id)sender {
-    _studyLabel.alpha = 1.0;
-    [UIView animateWithDuration:1.0
-                          delay:0
-                        options:UIViewAnimationOptionCurveEaseInOut
-                     animations:^{
-                         _studyLabel.alpha = 0.0;
-                     }
-                     completion:^(BOOL finished){
-                         
-                     }];
-}
-
     
 @end

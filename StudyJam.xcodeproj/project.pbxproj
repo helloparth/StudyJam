@@ -29,13 +29,13 @@
 		9776B06C1902678A0021671B /* sj-serif.png in Resources */ = {isa = PBXBuildFile; fileRef = 9776B0671902678A0021671B /* sj-serif.png */; };
 		9776B06D1902678A0021671B /* sj-sj.png in Resources */ = {isa = PBXBuildFile; fileRef = 9776B0681902678A0021671B /* sj-sj.png */; };
 		9785EDCD18FF884400C2ECDF /* StudyAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9785EDCC18FF884400C2ECDF /* StudyAnnotation.m */; };
+		9795374C19026F320078E51C /* sj-trans.png in Resources */ = {isa = PBXBuildFile; fileRef = 9795374B19026F320078E51C /* sj-trans.png */; };
 		97CFC1A718FC8DCA00DFFDEB /* APIConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 97CFC1A618FC8DCA00DFFDEB /* APIConnection.m */; };
 		97EA1E2418C2F10E00EACE30 /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97EA1E2318C2F10E00EACE30 /* FriendsViewController.m */; };
 		97EA1E2618C3046C00EACE30 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97EA1E2518C3046C00EACE30 /* MapKit.framework */; };
 		97EA1E2918C3066100EACE30 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97EA1E2818C3066100EACE30 /* MapViewController.m */; };
 		D8365ECE18F124B900CDD154 /* group.png in Resources */ = {isa = PBXBuildFile; fileRef = D8365ECC18F124B900CDD154 /* group.png */; };
 		D8365ECF18F124B900CDD154 /* individual.png in Resources */ = {isa = PBXBuildFile; fileRef = D8365ECD18F124B900CDD154 /* individual.png */; };
-		D88E84AE1901E19100368853 /* Andy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D88E84AD1901E19000368853 /* Andy.jpg */; };
 		D894576E18C704230007C905 /* ZHCustomSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D894576D18C704230007C905 /* ZHCustomSegue.m */; };
 		D89CFC6D18FF35AA00A3911C /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D89CFC6C18FF35AA00A3911C /* DetailsViewController.m */; };
 		D8FCBB6718DFA56C00B6C398 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8FCBB6618DFA56C00B6C398 /* AddressBookUI.framework */; };
@@ -83,6 +83,7 @@
 		9776B0681902678A0021671B /* sj-sj.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sj-sj.png"; sourceTree = "<group>"; };
 		9785EDCB18FF884400C2ECDF /* StudyAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudyAnnotation.h; sourceTree = "<group>"; };
 		9785EDCC18FF884400C2ECDF /* StudyAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudyAnnotation.m; sourceTree = "<group>"; };
+		9795374B19026F320078E51C /* sj-trans.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sj-trans.png"; sourceTree = "<group>"; };
 		97CFC1A518FC8DCA00DFFDEB /* APIConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIConnection.h; sourceTree = "<group>"; };
 		97CFC1A618FC8DCA00DFFDEB /* APIConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIConnection.m; sourceTree = "<group>"; };
 		97EA1E2218C2F10E00EACE30 /* FriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsViewController.h; sourceTree = "<group>"; };
@@ -223,6 +224,7 @@
 		D8365ECB18F124B900CDD154 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				9795374B19026F320078E51C /* sj-trans.png */,
 				9776B0641902678A0021671B /* sj-blank.png */,
 				9776B0651902678A0021671B /* sj-sans.png */,
 				9776B0661902678A0021671B /* sj-script.png */,
@@ -311,6 +313,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9795374C19026F320078E51C /* sj-trans.png in Resources */,
 				97646E3B18B35C4400A8DCC4 /* Images.xcassets in Resources */,
 				9776B06A1902678A0021671B /* sj-sans.png in Resources */,
 				9776B0691902678A0021671B /* sj-blank.png in Resources */,

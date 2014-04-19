@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface StudyViewController : UIViewController
+
 - (IBAction)detectUpSwipe:(id)sender;
 - (IBAction)detectDownSwipe:(id)sender;
-- (IBAction)detectTap:(id)sender;
 
 @end

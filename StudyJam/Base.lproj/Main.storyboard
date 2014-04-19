@@ -80,41 +80,49 @@
                                 <gestureRecognizers/>
                                 <color key="pageIndicatorTintColor" cocoaTouchSystemColor="lightTextColor"/>
                             </pageControl>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5K-dV-jFE">
-                                <rect key="frame" x="0.0" y="113" width="320" height="90"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5K-dV-jFE">
+                                <rect key="frame" x="0.0" y="384" width="320" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="FiX-1F-TCR"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sj-trans.png" translatesAutoresizingMaskIntoConstraints="NO" id="LQG-PF-lxf">
+                                <rect key="frame" x="40" y="103" width="240" height="273"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.50196081399917603" green="0.0" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.31372550129890442" green="0.066666670143604279" blue="0.25490197539329529" alpha="1" colorSpace="deviceRGB"/>
                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="ohj-su-iiZ" firstAttribute="centerX" secondItem="A5K-dV-jFE" secondAttribute="centerX" id="KCy-GC-fXB"/>
+                            <constraint firstItem="A5K-dV-jFE" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="3cN-Xy-DDe"/>
+                            <constraint firstItem="A5K-dV-jFE" firstAttribute="top" secondItem="LQG-PF-lxf" secondAttribute="bottom" constant="8" symbolic="YES" id="4gu-TG-b8A"/>
+                            <constraint firstAttribute="trailing" secondItem="A5K-dV-jFE" secondAttribute="trailing" id="VU7-dR-0Z7"/>
+                            <constraint firstItem="LQG-PF-lxf" firstAttribute="top" secondItem="ILX-9x-ywl" secondAttribute="bottom" constant="83" id="W7l-oj-tCN"/>
+                            <constraint firstItem="WVH-2x-eXm" firstAttribute="top" secondItem="A5K-dV-jFE" secondAttribute="bottom" constant="6" id="hOp-hd-evC"/>
                             <constraint firstAttribute="bottom" secondItem="ohj-su-iiZ" secondAttribute="bottom" id="i8G-CQ-Qo8"/>
+                            <constraint firstItem="LQG-PF-lxf" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="40" id="tNM-GI-Zhs"/>
                             <constraint firstItem="ohj-su-iiZ" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="tYV-Rs-LxX"/>
+                            <constraint firstItem="LQG-PF-lxf" firstAttribute="centerX" secondItem="A5K-dV-jFE" secondAttribute="centerX" id="xwD-Bn-k3X"/>
                         </constraints>
                         <connections>
-                            <outletCollection property="gestureRecognizers" destination="gEz-bt-mjt" appends="YES" id="Ys0-d5-XAU"/>
                             <outletCollection property="gestureRecognizers" destination="1Yh-yJ-Ib0" appends="YES" id="2n6-uy-Dvs"/>
                             <outletCollection property="gestureRecognizers" destination="xPw-fc-TcH" appends="YES" id="GMn-QA-uK7"/>
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="FNs-Iv-QVh"/>
                     <connections>
+                        <outlet property="jarImageView" destination="LQG-PF-lxf" id="sxl-Zp-CFT"/>
                         <outlet property="studyLabel" destination="A5K-dV-jFE" id="FbJ-iB-aZ5"/>
                         <segue destination="sKs-yk-PXf" kind="custom" identifier="Map" customClass="ZHCustomSegue" id="UbU-vW-wKw"/>
                         <segue destination="bRs-gZ-wxb" kind="push" identifier="Friends" id="1Iw-T7-SQt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="gEz-bt-mjt">
-                    <connections>
-                        <action selector="detectTap:" destination="vXZ-lx-hvc" id="Iya-mv-OC1"/>
-                    </connections>
-                </tapGestureRecognizer>
                 <swipeGestureRecognizer direction="down" id="1Yh-yJ-Ib0" userLabel="Down Swipe Gesture Recognizer">
                     <connections>
                         <action selector="detectDownSwipe:" destination="vXZ-lx-hvc" id="i0v-wN-8qQ"/>
@@ -342,6 +350,7 @@
     <resources>
         <image name="group.png" width="32" height="32"/>
         <image name="individual.png" width="32" height="32"/>
+        <image name="sj-trans.png" width="647" height="714"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
