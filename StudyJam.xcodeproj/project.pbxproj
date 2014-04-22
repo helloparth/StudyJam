@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		9707A11018FBCBD000F31506 /* FriendTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9707A10F18FBCBD000F31506 /* FriendTableViewController.m */; };
 		972180F618FBE34E00711452 /* StudyState.m in Sources */ = {isa = PBXBuildFile; fileRef = 972180F518FBE34E00711452 /* StudyState.m */; };
+		9736594D19061BD200763F03 /* LeftSlideSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 9736594C19061BD200763F03 /* LeftSlideSegue.m */; };
+		9736595019061D7D00763F03 /* RightSlideSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 9736594F19061D7D00763F03 /* RightSlideSegue.m */; };
+		973659531906296E00763F03 /* FriendTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 973659521906296E00763F03 /* FriendTabBarController.m */; };
 		97646E2318B35C4400A8DCC4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97646E2218B35C4400A8DCC4 /* Foundation.framework */; };
 		97646E2518B35C4400A8DCC4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97646E2418B35C4400A8DCC4 /* CoreGraphics.framework */; };
 		97646E2718B35C4400A8DCC4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97646E2618B35C4400A8DCC4 /* UIKit.framework */; };
@@ -36,7 +39,6 @@
 		97EA1E2918C3066100EACE30 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97EA1E2818C3066100EACE30 /* MapViewController.m */; };
 		D8365ECE18F124B900CDD154 /* group.png in Resources */ = {isa = PBXBuildFile; fileRef = D8365ECC18F124B900CDD154 /* group.png */; };
 		D8365ECF18F124B900CDD154 /* individual.png in Resources */ = {isa = PBXBuildFile; fileRef = D8365ECD18F124B900CDD154 /* individual.png */; };
-		D894576E18C704230007C905 /* ZHCustomSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D894576D18C704230007C905 /* ZHCustomSegue.m */; };
 		D89CFC6D18FF35AA00A3911C /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D89CFC6C18FF35AA00A3911C /* DetailsViewController.m */; };
 		D8FCBB6718DFA56C00B6C398 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8FCBB6618DFA56C00B6C398 /* AddressBookUI.framework */; };
 		D8FCBB6918DFA57900B6C398 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8FCBB6818DFA57900B6C398 /* AddressBook.framework */; };
@@ -57,6 +59,12 @@
 		9707A10F18FBCBD000F31506 /* FriendTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendTableViewController.m; sourceTree = "<group>"; };
 		972180F418FBE34E00711452 /* StudyState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudyState.h; sourceTree = "<group>"; };
 		972180F518FBE34E00711452 /* StudyState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudyState.m; sourceTree = "<group>"; };
+		9736594B19061BD200763F03 /* LeftSlideSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftSlideSegue.h; sourceTree = "<group>"; };
+		9736594C19061BD200763F03 /* LeftSlideSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftSlideSegue.m; sourceTree = "<group>"; };
+		9736594E19061D7D00763F03 /* RightSlideSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightSlideSegue.h; sourceTree = "<group>"; };
+		9736594F19061D7D00763F03 /* RightSlideSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightSlideSegue.m; sourceTree = "<group>"; };
+		973659511906296E00763F03 /* FriendTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendTabBarController.h; sourceTree = "<group>"; };
+		973659521906296E00763F03 /* FriendTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendTabBarController.m; sourceTree = "<group>"; };
 		97646E1F18B35C4400A8DCC4 /* StudyJam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyJam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97646E2218B35C4400A8DCC4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		97646E2418B35C4400A8DCC4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -93,8 +101,6 @@
 		97EA1E2818C3066100EACE30 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		D8365ECC18F124B900CDD154 /* group.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = group.png; sourceTree = "<group>"; };
 		D8365ECD18F124B900CDD154 /* individual.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = individual.png; sourceTree = "<group>"; };
-		D894576C18C704230007C905 /* ZHCustomSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHCustomSegue.h; sourceTree = "<group>"; };
-		D894576D18C704230007C905 /* ZHCustomSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHCustomSegue.m; sourceTree = "<group>"; };
 		D89CFC6B18FF35AA00A3911C /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
 		D89CFC6C18FF35AA00A3911C /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
 		D8FCBB6618DFA56C00B6C398 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
@@ -170,12 +176,16 @@
 				97646E3118B35C4400A8DCC4 /* AppDelegate.h */,
 				97646E3218B35C4400A8DCC4 /* AppDelegate.m */,
 				97646E3418B35C4400A8DCC4 /* Main.storyboard */,
+				973659511906296E00763F03 /* FriendTabBarController.h */,
+				973659521906296E00763F03 /* FriendTabBarController.m */,
 				9785EDCB18FF884400C2ECDF /* StudyAnnotation.h */,
 				9785EDCC18FF884400C2ECDF /* StudyAnnotation.m */,
 				97CFC1A518FC8DCA00DFFDEB /* APIConnection.h */,
 				97CFC1A618FC8DCA00DFFDEB /* APIConnection.m */,
-				D894576C18C704230007C905 /* ZHCustomSegue.h */,
-				D894576D18C704230007C905 /* ZHCustomSegue.m */,
+				9736594B19061BD200763F03 /* LeftSlideSegue.h */,
+				9736594C19061BD200763F03 /* LeftSlideSegue.m */,
+				9736594E19061D7D00763F03 /* RightSlideSegue.h */,
+				9736594F19061D7D00763F03 /* RightSlideSegue.m */,
 				97646E3718B35C4400A8DCC4 /* StudyViewController.h */,
 				97646E3818B35C4400A8DCC4 /* StudyViewController.m */,
 				97EA1E2718C3066100EACE30 /* MapViewController.h */,
@@ -343,6 +353,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				97646E3918B35C4400A8DCC4 /* StudyViewController.m in Sources */,
+				973659531906296E00763F03 /* FriendTabBarController.m in Sources */,
 				D89CFC6D18FF35AA00A3911C /* DetailsViewController.m in Sources */,
 				972180F618FBE34E00711452 /* StudyState.m in Sources */,
 				9785EDCD18FF884400C2ECDF /* StudyAnnotation.m in Sources */,
@@ -350,8 +361,9 @@
 				97CFC1A718FC8DCA00DFFDEB /* APIConnection.m in Sources */,
 				97EA1E2918C3066100EACE30 /* MapViewController.m in Sources */,
 				97646E3318B35C4400A8DCC4 /* AppDelegate.m in Sources */,
+				9736594D19061BD200763F03 /* LeftSlideSegue.m in Sources */,
 				9707A11018FBCBD000F31506 /* FriendTableViewController.m in Sources */,
-				D894576E18C704230007C905 /* ZHCustomSegue.m in Sources */,
+				9736595019061D7D00763F03 /* RightSlideSegue.m in Sources */,
 				97646E2F18B35C4400A8DCC4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

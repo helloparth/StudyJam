@@ -56,15 +56,7 @@
 }
 
 - (IBAction)handleSwipeInFromRightEdge:(id)sender {
-    [self.navigationController popToRootViewControllerAnimated:YES];
-    [UIView transitionWithView:self.navigationController.view
-                      duration: 1.0
-                       options: UIViewAnimationOptionTransitionCurlDown
-                    animations: ^{
-                        [self.navigationController popToRootViewControllerAnimated:NO];
-                    }
-                    completion:NULL];
-
+    [self performSegueWithIdentifier:@"Slider" sender:self];
 }
 
 - (void)didReceiveMemoryWarning
@@ -78,10 +70,7 @@
     [self mapView: _mapView didUpdateUserLocation: userLocation];
     
 }
-- (IBAction)toMain:(id)sender {
-    [self.navigationController popToRootViewControllerAnimated:YES];
-    
-}
+
 - (IBAction)changeMap:(id)sender {
     if (_mapView.mapType == MKMapTypeStandard)
         _mapView.mapType = MKMapTypeSatellite;

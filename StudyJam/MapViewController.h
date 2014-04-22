@@ -18,7 +18,6 @@
 
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation;
 - (IBAction)zoomIn:(UIBarButtonItem *)sender;
-- (IBAction)toMain:(id)sender;
 - (IBAction)changeMap:(id)sender;
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;

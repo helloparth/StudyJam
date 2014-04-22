@@ -56,6 +56,7 @@
                     <navigationItem key="navigationItem" id="Ktk-th-yxs"/>
                     <connections>
                         <outlet property="mapView" destination="0eg-x4-bVa" id="b06-fx-j59"/>
+                        <segue destination="vXZ-lx-hvc" kind="custom" identifier="Slider" customClass="RightSlideSegue" id="FyJ-yb-Tc7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e0J-qe-zO8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -118,8 +119,8 @@
                     <connections>
                         <outlet property="jarImageView" destination="LQG-PF-lxf" id="sxl-Zp-CFT"/>
                         <outlet property="studyLabel" destination="A5K-dV-jFE" id="FbJ-iB-aZ5"/>
-                        <segue destination="sKs-yk-PXf" kind="custom" identifier="Map" customClass="ZHCustomSegue" id="UbU-vW-wKw"/>
-                        <segue destination="bRs-gZ-wxb" kind="push" identifier="Friends" id="1Iw-T7-SQt"/>
+                        <segue destination="sKs-yk-PXf" kind="custom" identifier="Map" customClass="LeftSlideSegue" id="UbU-vW-wKw"/>
+                        <segue destination="bRs-gZ-wxb" kind="custom" identifier="Friends" customClass="RightSlideSegue" id="1Iw-T7-SQt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -136,10 +137,10 @@
             </objects>
             <point key="canvasLocation" x="1034" y="-354"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Friend Tab Bar Controller-->
         <scene sceneID="MNu-p3-zEY">
             <objects>
-                <tabBarController definesPresentationContext="YES" id="bRs-gZ-wxb" sceneMemberID="viewController">
+                <tabBarController definesPresentationContext="YES" id="bRs-gZ-wxb" customClass="FriendTabBarController" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="17L-3R-pRr"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="ksx-f4-c3r">
@@ -150,7 +151,7 @@
                     <connections>
                         <segue destination="ct2-if-47U" kind="relationship" relationship="viewControllers" id="PUG-43-QTo"/>
                         <segue destination="0fW-gi-pbj" kind="relationship" relationship="viewControllers" id="t3Y-lm-cq1"/>
-                        <segue destination="vXZ-lx-hvc" kind="custom" customClass="UIStoryboardPopoverSegue" id="b6F-P0-UNy"/>
+                        <segue destination="vXZ-lx-hvc" kind="custom" identifier="Slider" customClass="LeftSlideSegue" id="57u-jv-DXN"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zYg-6v-gvK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -251,6 +252,7 @@
         <!--Navigation Controller-->
         <scene sceneID="aqK-Ff-5qS">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FOQ-RP-85y" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="ZCT-rU-Ye6" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Tx4-2p-utC">
@@ -262,7 +264,6 @@
                         <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="kzF-op-5Ma"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FOQ-RP-85y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="452" y="-342"/>
         </scene>
@@ -358,6 +359,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="kzF-op-5Ma"/>
+        <segue reference="57u-jv-DXN"/>
     </inferredMetricsTieBreakers>
 </document>
