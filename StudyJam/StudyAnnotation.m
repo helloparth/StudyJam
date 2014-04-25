@@ -10,12 +10,13 @@
 
 @implementation StudyAnnotation
 
--(id) initWithTitle:(NSString *)title andLocation:(CLLocationCoordinate2D)location andColor:(UIColor*)color {
+-(id) initWithTitle:(NSString *)title andLocation:(CLLocationCoordinate2D)location andColor:(UIColor*)color andNumber: (NSString*)phoneNumber {
     self = [super init];
     if(self) {
         _title = title;
         _coordinate = location;
         _color = color;
+        _phoneNumber = phoneNumber;
     }
     
     return self;
@@ -58,12 +59,18 @@
     textButton.frame = CGRectMake(10.0, 10.0, 40.0, 40.0);
     
     [callButton setTitle:@"Call" forState:UIControlStateNormal];
+    [callButton addTarget:self action:@selector(callPhoneNumber) forControlEvents:UIControlEventTouchUpInside];
     [textButton setTitle:@"Text" forState:UIControlStateNormal];
     
     annotationView.leftCalloutAccessoryView = callButton;
     annotationView.rightCalloutAccessoryView = textButton;
     
     return annotationView;
+}
+
+-(void) callPhoneNumber {
+    NSString *phoneURL = [@"telprompt://" stringByAppendingString:_phoneNumber];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phoneURL]];
 }
 
 @end

@@ -14,8 +14,9 @@
 @property (nonatomic) CLLocationCoordinate2D coordinate;
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic) UIColor *color;
+@property (nonatomic) NSString *phoneNumber;
 
--(id) initWithTitle:(NSString*)title andLocation:(CLLocationCoordinate2D)location andColor: (UIColor*)color;
+-(id) initWithTitle:(NSString*)title andLocation:(CLLocationCoordinate2D)location andColor: (UIColor*)color andNumber: (NSString*)phoneNumber;
 +(UIImage*) createImageForColor:(UIColor*)color;
 -(MKAnnotationView*) annotationView;
 

@@ -38,7 +38,7 @@
                 
                 CLLocationCoordinate2D location = CLLocationCoordinate2DMake(latitude, longitude);
                 
-                StudyAnnotation *annot = [[StudyAnnotation alloc] initWithTitle:@"Parth Patel" andLocation:location andColor: [studyState getStudyLevelColor]];
+                StudyAnnotation *annot = [[StudyAnnotation alloc] initWithTitle:@"Parth Patel" andLocation:location andColor: [studyState getStudyLevelColor] andNumber:@"4045130232"];
                 annot.coordinate = location;
                 [self.mapView addAnnotation:annot];
             }];
@@ -110,4 +110,46 @@
         return nil;
     }
 }
+
+-(void)makeCallToNumber:(NSString *)numberToCall{
+    NSString *telephoneString=[numberToCall stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    
+    NSMutableString *str1=[[NSMutableString alloc] initWithString:telephoneString];
+    
+    [str1 setString:[str1 stringByReplacingOccurrencesOfString:@"(" withString:@""]];
+    
+    [str1 setString:[str1 stringByReplacingOccurrencesOfString:@")" withString:@""]];
+    
+    [str1 setString:[str1 stringByReplacingOccurrencesOfString:@"-" withString:@""]];
+    
+    [str1 setString:[str1 stringByReplacingOccurrencesOfString:@" " withString:@""]];
+    
+    telephoneString = [@"tel://" stringByAppendingString:str1];
+    
+    if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:telephoneString]]) {
+        
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:telephoneString]];
+        
+    }
+    
+}
+
+-(void)sendSMSToNumber:(NSString *)numberToSend{
+    if (![MFMessageComposeViewController canSendText]) {
+        NSLog(@"Unable to send SMS message.");
+    }
+    else {
+        MFMessageComposeViewController *sms = [[MFMessageComposeViewController alloc] init];
+        [sms setMessageComposeDelegate:self];
+        
+        [sms setRecipients:[NSArray arrayWithObjects:numberToSend, nil]];
+        [sms setBody:@"This is a SMS message from Appcoda.com"];
+        [self presentViewController:sms animated:YES completion:nil];
+    }
+}
+
+-(void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result{
+    [controller dismissViewControllerAnimated:YES completion:nil];
+}
+
 @end

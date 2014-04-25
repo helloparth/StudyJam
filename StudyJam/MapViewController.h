@@ -6,10 +6,11 @@
 //  Copyright (c) 2014 StudyJam, Inc. All rights reserved.
 //
 
+#import <MessageUI/MessageUI.h>
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 
-@interface MapViewController : UIViewController <UIGestureRecognizerDelegate, MKMapViewDelegate>
+@interface MapViewController : UIViewController <UIGestureRecognizerDelegate, MKMapViewDelegate, MFMessageComposeViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *locationButton;
 
 
