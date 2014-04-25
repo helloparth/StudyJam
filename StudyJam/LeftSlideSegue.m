@@ -20,8 +20,6 @@
     transition.type = kCATransitionPush;
     transition.subtype = kCATransitionFromLeft;
     
-    NSLog(@"TRANSITION");
-    
     [sourceViewController.navigationController.view.layer addAnimation:transition forKey:kCATransition];
     [sourceViewController.navigationController pushViewController:destinationViewController animated:NO];
 }
