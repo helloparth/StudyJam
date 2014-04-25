@@ -55,8 +55,10 @@
     _mapView.delegate = self;
 }
 
-- (IBAction)handleSwipeInFromRightEdge:(id)sender {
-    [self performSegueWithIdentifier:@"Slider" sender:self];
+- (IBAction)handleSwipeInFromRightEdge:(UIGestureRecognizer*)sender {
+    if (sender.state == UIGestureRecognizerStateEnded) {
+        [self performSegueWithIdentifier:@"Slider" sender:self];
+    }
 }
 
 - (void)didReceiveMemoryWarning
