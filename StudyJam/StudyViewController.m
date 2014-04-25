@@ -27,7 +27,6 @@ static const NSTimeInterval FOCUS_ANIMATION_DURATION = 1.00;
     [super viewDidLoad];
 
 	self.studyState = [StudyState new];
-    [self.studyLabel setText:[self.studyState getStudyLevelText]];
     
     self.swipeInLeftGestureRecognizer = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeInFromLeftEdge:)];
     [self.swipeInLeftGestureRecognizer setEdges:UIRectEdgeLeft];
@@ -36,6 +35,12 @@ static const NSTimeInterval FOCUS_ANIMATION_DURATION = 1.00;
     self.swipeInRightGestureRecognizer = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeInFromRightEdge:)];
     [self.swipeInRightGestureRecognizer setEdges:UIRectEdgeRight];
     [self.view addGestureRecognizer:self.swipeInRightGestureRecognizer];
+
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    [self.studyLabel setText:[self.studyState getStudyLevelText]];
+    
     
     // Add animation to label
     self.labelAnimation = [CATransition animation];
