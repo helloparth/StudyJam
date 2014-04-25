@@ -51,6 +51,17 @@
     annotationView.layer.shadowOffset = CGSizeMake(1, 1);
     annotationView.layer.shadowRadius = 7;
     annotationView.layer.shadowOpacity = 0.5;
+    UIButton *callButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    UIButton *textButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    
+    callButton.frame = CGRectMake(10.0, 10.0, 40.0, 40.0);
+    textButton.frame = CGRectMake(10.0, 10.0, 40.0, 40.0);
+    
+    [callButton setTitle:@"Call" forState:UIControlStateNormal];
+    [textButton setTitle:@"Text" forState:UIControlStateNormal];
+    
+    annotationView.leftCalloutAccessoryView = callButton;
+    annotationView.rightCalloutAccessoryView = textButton;
     
     return annotationView;
 }
