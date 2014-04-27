@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 StudyJam, Inc. All rights reserved.
 //
 
+#import <MessageUI/MessageUI.h>
+
 #import "StudyAnnotation.h"
 
 @implementation StudyAnnotation
@@ -61,6 +63,7 @@
     [callButton setTitle:@"Call" forState:UIControlStateNormal];
     [callButton addTarget:self action:@selector(callPhoneNumber) forControlEvents:UIControlEventTouchUpInside];
     [textButton setTitle:@"Text" forState:UIControlStateNormal];
+    [textButton addTarget:self action:@selector(textPhoneNumber) forControlEvents:UIControlEventTouchUpInside];
     
     annotationView.leftCalloutAccessoryView = callButton;
     annotationView.rightCalloutAccessoryView = textButton;
@@ -71,6 +74,12 @@
 -(void) callPhoneNumber {
     NSString *phoneURL = [@"telprompt://" stringByAppendingString:_phoneNumber];
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phoneURL]];
+}
+
+-(void) textPhoneNumber {
+    // TODO: Figure out how to present view controller from an annotationView
+    NSString *smsURL = [@"sms://" stringByAppendingString:_phoneNumber];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:smsURL]];
 }
 
 @end
