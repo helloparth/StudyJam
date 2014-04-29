@@ -14,7 +14,7 @@ static NSURL *serverURL = nil;
 
 + (void)initialize {
     // TODO: Change to hosted server
-    serverURL = [NSURL URLWithString:@"http://localhost:5000"];
+    serverURL = [NSURL URLWithString:@"http://study-jam.herokuapp.com/"];
 }
 
 /*
