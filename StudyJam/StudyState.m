@@ -35,11 +35,13 @@ static const int MIN_STUDY_LEVEL = 0;
 - (UIColor*)getStudyLevelColor {
     switch (self.studyLevel) {
         case 0:
-            return [UIColor greenColor];
+            // Dark purple
+            return [UIColor colorWithRed:178/255.0f green:23/255.0f blue:173/255.0f alpha:1.0f];
             break;
             
         case 1:
-            return [UIColor yellowColor];
+            // Royal blue
+            return [UIColor colorWithRed:44/255.0f green:104/255.0f blue:193/255.0f alpha:1.0f];
             break;
             
         case 2:
@@ -47,7 +49,8 @@ static const int MIN_STUDY_LEVEL = 0;
             break;
             
         case 3:
-            return [UIColor redColor];
+            // Pinkish red
+            return [UIColor colorWithRed:214/255.0f green:55/255.0f blue:84/255.0f alpha:1.0f];
             break;
             
         default:
